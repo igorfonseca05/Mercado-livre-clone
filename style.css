@@ -61,7 +61,7 @@ html {
     border-radius: 2px;
     /* height: 100%; */
     padding-left: 10px;
-    height: 24px;
+    height: 30px;
 
 }
 
@@ -73,6 +73,7 @@ html {
     font-weight: 200;
     padding: 0px;
     margin: 0px;
+    font-size: 28px;
 }
 
 .conteinerIcons>div {
@@ -113,5 +114,7 @@ html {
 }
 
 .slide{
+    position: absolute;
+    top: 100px;
     background-color: rebeccapurple;
 }
