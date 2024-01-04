@@ -5,33 +5,55 @@ const moveImagens = (imgContainer, items) => {
 
     const sizeImgContainer = Math.ceil(imgContainer.clientWidth)
 
-    // imgContainer.addEventListener('click', () => {
-    //     imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'})  
+    function debounce(func, delay) {
+        let timeoutId;
 
-    //     const lastItem = items[items.length - 1];
-    //     imgContainer.insertBefore(items[0], null);
-    //     items = document.querySelectorAll(".item");
-    // })
+        return function () {
+            const context = this;
+            const args = arguments;
+
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(function () {
+                func.apply(context, args);
+            }, delay);
+        };
+    }
+
+
     let startX;
 
     imgContainer.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX
     })
 
-    imgContainer.addEventListener('touchmove', (e) => {
-        if(startX !==  null) {
-            let right =  e.touches[0].clientX
+
+    const move = (e) => {
+        if (startX !== null) {
+            let right = e.touches[0].clientX
             let diff = startX - right
 
-            const direction = diff > 0? 1 : -1
+            let direction = diff >= 0 ? 1 : -1
+
+            console.log(direction)
+
             imgContainer.scrollBy({left: `${sizeImgContainer * direction}`, behavior: 'smooth'});
-        }  
-    })
+    
+        }
+    }
+
+
+    imgContainer.addEventListener('touchmove', debounce((e)=> {move(e)}, 1))
+
     imgContainer.addEventListener('touchend', (e) => {
+        // imgContainer.scrollBy({left: `${0}px`, behavior: 'smooth'});
         startX = null
     })
 
 }
+
+
+
 
 const createslide = () => {
     const imgContainer = document.querySelector('[data-js="imagensContainer"]')

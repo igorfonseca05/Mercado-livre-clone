@@ -127,6 +127,7 @@ html {
     scrollbar-width: thin;
     border-radius: 10px;
     width: 346px;
+    height: 158.22px;
 } 
 
 [data-js="imagensContainer"]::-webkit-scrollbar {
