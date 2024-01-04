@@ -5,14 +5,24 @@ const moveImagens = (imgContainer, items) => {
 
     const sizeImgContainer = Math.ceil(imgContainer.clientWidth)
 
-    imgContainer.addEventListener('click', () => {
-        imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'})
+    // imgContainer.addEventListener('click', () => {
+    //     imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'})  
+
+    //     const lastItem = items[items.length - 1];
+    //     imgContainer.insertBefore(items[0], null);
+    //     items = document.querySelectorAll(".item");
+    // })
+
+    // imgContainer.addEventListener('touchstart', () => {
+    //     imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'});
+    // })
+    imgContainer.addEventListener('touchmove', () => {
+        imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'});
     })
 }
 
 const createslide = () => {
     const imgContainer = document.querySelector('[data-js="imagensContainer"]')
-    const slidec= document.querySelector('.slidec')
 
     const imagens = [
         { id: 1, url: "img/1.jpeg" },
