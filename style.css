@@ -13,7 +13,7 @@ html {
 
 .bgContainer {
     background-color: #ffeb3b;
-    height: 200px;
+    height: 350px;
 }
 
 .lineOne {
@@ -108,6 +108,10 @@ html {
 
 .gradient{
     margin-top: 25px;
-    height: 120px;
+    height: 260px;
     background-image: linear-gradient(180deg, #ffeb3b 0%, #ebebeb 92%);
+}
+
+.slide{
+    background-color: rebeccapurple;
 }
