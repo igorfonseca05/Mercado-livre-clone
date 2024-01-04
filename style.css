@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #ebebeb;
+}
+
+.bgContainer {
+    background-color: #ffeb3b;
+    height: 120px;
+}
+
+.lineOne {
+    margin-top: 5px;
+}
+
+.colLogo {
+    /* background-color: antiquewhite; */
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.logoMercadoLivre {
+    margin-left: 6px;
+    /* height: 40px; */
+    width: 40px;
+    height: 30px;
+}
+
+.containerInput {
+    margin: 0px;
+    padding: 0px;
+}
+
+.inputElements{
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+.inputElements span{
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: gray;
+    font-weight: 200;
+}
+
+.searchInput {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    /* height: 100%; */
+    padding-left: 10px;
+    height: 24px;
+
+}
+
+.searchInput::placeholder {
+    color: rgb(173, 173, 173);
+}
+
+.conteinerIcons>div>span {
+    font-weight: 200;
+    padding: 0px;
+    margin: 0px;
+}
+
+.conteinerIcons>div {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.conteinerIcons > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+
+}
+
+.secondLine{
+    margin-top: 12px;
+    font-size: 13px;
+    color: rgb(122, 122, 122);
+}
+
+.divIcon {
+    /* background-color: cadetblue; */
+    text-align: center;
+}
+.divIcon > span{
+    width: 10%;
+    font-size: 13px;
+}
+
+.textSecondLine{
+    padding: 0px;
+}
+
+.gradient{
+    height: 70px;
+    background-image: linear-gradient(180deg, #ffeb3b 0%, #ebebeb 92%);
+}
