@@ -12,13 +12,25 @@ const moveImagens = (imgContainer, items) => {
     //     imgContainer.insertBefore(items[0], null);
     //     items = document.querySelectorAll(".item");
     // })
+    let startX;
 
-    // imgContainer.addEventListener('touchstart', () => {
-    //     imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'});
-    // })
-    imgContainer.addEventListener('touchmove', () => {
-        imgContainer.scrollBy({left: sizeImgContainer, behavior: 'smooth'});
+    imgContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX
     })
+
+    imgContainer.addEventListener('touchmove', (e) => {
+        if(startX !==  null) {
+            let right =  e.touches[0].clientX
+            let diff = startX - right
+
+            const direction = diff > 0? 1 : -1
+            imgContainer.scrollBy({left: `${sizeImgContainer * direction}`, behavior: 'smooth'});
+        }  
+    })
+    imgContainer.addEventListener('touchend', (e) => {
+        startX = null
+    })
+
 }
 
 const createslide = () => {
