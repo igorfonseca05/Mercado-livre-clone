@@ -2,6 +2,7 @@
 :root {
     --greenText: #0f9e54;
     --blueText: #3483fa;
+    --elementsColor: #fff;
 }
 
 
@@ -293,7 +294,7 @@ html {
 .containerSlide3{
     position: relative;
     top: -190px;
-    background-color: rgb(216, 77, 42);
+    /* background-color: rgb(231, 231, 231); */
     margin: 0 auto;
     /* max-width: 346px; */
     
@@ -425,17 +426,40 @@ html {
 .loginCard{
     position: relative;
     top: -180px;
-    background-color: #0f9e54;
+    /* background-color: #0f9e54; */
 }
 
 .loginContainer{
     margin: 0 auto;
     max-width: 400px;
-    background-color: wheat;
+    background-color: var(--elementsColor);
     /* width: 94%; */
     max-width: 335px;
+    padding: 15px;
 }
 
 .oi{
     height: 100vh;
+}
+
+.buttonContainer button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: var(--blueText);
+    color: var(--elementsColor);
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.signInContainer{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signInContainer p{
+    font-size: 12px;
+}
+.signInContainer a{
+    text-decoration: none;
 }
