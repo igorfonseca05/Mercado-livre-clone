@@ -436,6 +436,7 @@ html {
     /* width: 94%; */
     max-width: 335px;
     padding: 15px;
+    border-radius: 10px;
 }
 
 .oi{
@@ -444,6 +445,7 @@ html {
 
 .buttonContainer button{
     width: 100%;
+    margin: 0px;
     height: 35px;
     border: none;
     background-color: var(--blueText);
@@ -458,7 +460,8 @@ html {
 }
 
 .signInContainer p{
-    font-size: 12px;
+    font-size: 14px;
+    color: #494949;
 }
 .signInContainer a{
     text-decoration: none;
