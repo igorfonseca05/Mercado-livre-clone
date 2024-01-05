@@ -225,7 +225,7 @@ html {
     margin-left: 0px;
     overflow-x: scroll;
     /* background-color: aquamarine; */
-    padding-left: 4px;
+    /* padding-left: 4px; */
     
 }
 
@@ -306,7 +306,7 @@ html {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding-left: 20px;
+    padding-left: 12px;
     
 }
 
@@ -434,7 +434,7 @@ html {
     max-width: 400px;
     background-color: var(--elementsColor);
     /* width: 94%; */
-    max-width: 335px;
+    max-width: 338px;
     padding: 15px;
     border-radius: 10px;
 }
