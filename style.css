@@ -126,27 +126,30 @@ html {
 [data-js="imagensContainer"] {
     display: flex;
     padding: 0;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     scrollbar-width: thin;
     border-radius: 10px;
-    width: 346px;
+    max-width: 346px;
     height: 158.22px;
 }
 
-[data-js="imagensContainer"]::-webkit-scrollbar {
+/* [data-js="imagensContainer"]::-webkit-scrollbar {
     display: none;
 
-}
+} */
 
 [data-js="imagensContainer"] img {
-    width: 346px;
+    min-width: 346px;
     height: 100%;
     transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 10px;
 }
 
 .item {
-    width: 346px;
+    max-width: 346px;
     transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 0px 2px;
+    transform: translateX(-5px);
 }
 
 
@@ -172,7 +175,7 @@ html {
     width: 346px;
     /* background-color: rgb(22, 115, 197); */
     border-radius: 2px;
-    background-color: aliceblue;
+    background-color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
     padding: 3px;
 }
@@ -196,17 +199,18 @@ html {
     position: relative;
     display: flex;
     top: -180px;
-    font-size: 12px;
+    font-size: 10px;
     margin: 0 auto;
-    margin-left: 15px;
+    margin-left: 0px;
     overflow-x: scroll;
+    background-color: aquamarine;
     
 }
+
 [data-js="SecondimagensContainer"]::-webkit-scrollbar {
     display: none;
 
 }
-
 
 .imgAndTextContainer{
     display: flex;
@@ -215,6 +219,8 @@ html {
     text-align: center;
     /* justify-content: center; */
     margin-right: 10px;
+    padding-left: 6px;
+    
 }
 
 .circImg{
@@ -225,11 +231,12 @@ html {
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     /* margin-right: 10px; */
-    min-width: 48px;  
-    height: 48px;  
+    min-width: 44px;  
+    height: 44px;  
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
 }
 
 [data-js="SecondimagensContainer"] img {
-    width: 70%; 
+    width: 50%; 
+
 }

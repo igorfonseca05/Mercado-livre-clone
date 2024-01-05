@@ -31,28 +31,21 @@ const moveImagens = (imgContainer, items) => {
     let scrollX;
     let direction
 
-    const move =  (e) => {
-        scrollX = imgContainer.scrollLeft
 
-        if (startX !== null && scrollX > 10) {
+    imgContainer.addEventListener('touchmove', (e) => {
+
+        if (startX !== null) {
             right = e.touches[0].clientX
             let diff = startX - right
 
             direction = diff >= 0 ? -1 : 1
 
-            // console.log(imgContainer.scrollWidth - scrollX)
-            // console.log(imgContainer.clientWidth - scrollX)
-
-
             items.forEach(img => {
-                img.style.transform = `translateX(${(sizeImgContainer- scrollX) * direction}px)`
+                img.style.transform = `translateX(${(sizeImgContainer) * direction}px)`
             })
-            // console.log(imgContainer.clientWidth, scrollX)
 
         }
-    }
-
-    imgContainer.addEventListener('touchmove', debounce((e)=> {move(e)}, 15))
+    })
 
     imgContainer.addEventListener('touchend', (e) => {
         startX = null;
@@ -60,13 +53,41 @@ const moveImagens = (imgContainer, items) => {
 
 }
 
+const templeteToBeRender = (imagens, imgContainer, textos) => {
+    if(imagens[0].p) {
+        imagens.forEach(img => {
+            imgContainer.innerHTML += 
+            `<div class='imgAndTextContainer'>
+            <div class='circImg'>
+            <img src=${img.url}>
+            </div>
+            <p>${textos[img.id]}</p>
+            </div>`
+        })
+        return
+    }
 
+    imagens.forEach(img => {
+        imgContainer.innerHTML += 
+        `<div class='item'>
+        <img src=${img.url}>
+        </div>`
+    })
 
+}
 
-const createslide = () => {
-    const imgContainer = document.querySelector('[data-js="imagensContainer"]')
+const createSlides = (imagesSlide, containerSlide, textos = '') => {
+    const imgContainer = document.querySelector(`[data-js="${containerSlide}"]`)
 
-    const imagens = [
+    templeteToBeRender(imagesSlide, imgContainer, textos)
+
+    let items = document.querySelectorAll('.item')
+
+    return [imgContainer, items]
+}
+
+const slideOne = ()=>{
+    const slideImgOne = [
         { id: 1, url: "img/1.jpeg" },
         { id: 2, url: "img/2.jpeg" },
         { id: 3, url: "img/3.jpeg" },
@@ -74,51 +95,33 @@ const createslide = () => {
         { id: 5, url: "img/5.jpeg" },
     ]
 
-    imagens.forEach(img => {
-        imgContainer.innerHTML +=
-            `<div class='item'>
-         <img src=${img.url}>
-        </div>`
-    })
-
-    let items = document.querySelectorAll('.item')
+    const [imgContainer, items] = createSlides(slideImgOne, 'imagensContainer')
 
     moveImagens(imgContainer, items)
 }
 
 
-const createslide2 = () => {
-    const imgContainer = document.querySelector('[data-js="SecondimagensContainer"]')
 
-    const imagens = [
-        { id: 1, url: "img/oi.png" },
-        { id: 2, url: "img/oi.png" },
-        { id: 3, url: "img/oi.png" },
-        { id: 4, url: "img/oi.png" },
-        { id: 5, url: "img/oi.png" },
-        { id: 1, url: "img/oi.png" },
-        { id: 2, url: "img/oi.png" },
-        { id: 3, url: "img/oi.png" },
-        { id: 4, url: "img/oi.png" },
-        { id: 5, url: "img/oi.png" },
-    ]
-
+const slideTwo = () =>{
+    
     const textos = ['Mercado Pago', 'Ofertas', 'Mercado Play', 'Cupons', 'Celulares']
 
-    imagens.forEach(img => {
-        imgContainer.innerHTML +=
-        `<div class='imgAndTextContainer'>
-        <div class='circImg'>
-         <img src=${img.url}>
-         </div>
-         <p>${textos[img.id]}</p>
-        
-        </div>`
-    })
-
-    let items = document.querySelectorAll('.item')
+    const slideImgOTwo = [
+        { id: 1, url: "img/oi.png", p: true },
+        { id: 2, url: "img/oi.png", p: true },
+        { id: 3, url: "img/oi.png", p: true },
+        { id: 4, url: "img/oi.png", p: true },
+        { id: 3, url: "img/oi.png", p: true },
+        { id: 1, url: "img/oi.png", p: true },
+        { id: 2, url: "img/oi.png", p: true },
+        { id: 3, url: "img/oi.png", p: true },
+        { id: 3, url: "img/oi.png", p: true },
+        { id: 3, url: "img/oi.png", p: true },
+    ]
+    
+    createSlides(slideImgOTwo, 'SecondimagensContainer', textos)
 }
 
 
-createslide2()
-createslide()
+slideOne()
+slideTwo()
