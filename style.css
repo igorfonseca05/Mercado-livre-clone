@@ -187,7 +187,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 90%;
-    max-width:340px ;
+    max-width:338px ;
     /* background-color: rgb(22, 115, 197); */
     border-radius: 2px;
     background-color: #ffffff;
@@ -206,12 +206,19 @@ html {
 
 }
 
-
+.containerSlide2{
+   /* background-color: #0f9e54;  */
+   position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -190px;
+}
 
 [data-js="SecondimagensContainer"] {
     position: relative;
     display: flex;
-    top: -180px;
+    /* top: -180px; */
     font-size: 10px;
     margin: 0 auto;
     margin-left: 0px;
@@ -231,10 +238,10 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* justify-content: center; */
-    margin-right: 12px;
+    position: relative;
     /* padding: 0px 6px; */
-    /* margin: 0 auto; */  
+    /* margin: 0 auto; */ 
+    margin: 5px 12px -12px 0px; 
 }
 
 .imgAndTextContainer:first-child{
@@ -286,7 +293,7 @@ html {
 .containerSlide3{
     position: relative;
     top: -190px;
-    background-color: rgb(130, 213, 238);
+    background-color: rgb(130, 238, 166);
     margin: 0 auto;
     /* max-width: 346px; */
     
@@ -298,7 +305,7 @@ html {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding-left: 12px;
+    padding-left: 20px;
     
 }
 
