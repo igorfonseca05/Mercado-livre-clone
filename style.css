@@ -239,7 +239,7 @@ html {
     position: absolute;
     content: 'NOVO';
     width: 50px;
-    top: 32px;border-radius: 10px;
+    top: 35px;border-radius: 10px;
     color: white;
     background-color: rgb(52, 64, 226);
     
@@ -253,8 +253,8 @@ html {
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     /* margin-right: 10px; */
-    min-width: 44px;  
-    height: 44px;  
+    min-width: 48px;  
+    height: 48px;  
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
 }
 
