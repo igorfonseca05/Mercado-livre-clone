@@ -224,7 +224,7 @@ html {
     margin-left: 0px;
     overflow-x: scroll;
     /* background-color: aquamarine; */
-    padding-left: 4px;
+    /* padding-left: 4px; */
     
 }
 
@@ -250,7 +250,7 @@ html {
 
 .imgAndTextContainer:nth-child(1){
     /* background-color: #a36f28; */
-    margin-left: 15px;
+    margin-left: 12px;
     
 }
 
