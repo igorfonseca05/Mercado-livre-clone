@@ -1,3 +1,10 @@
+
+:root {
+    --greenText: #0f9e54;
+    --blueText: #3483fa;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -191,9 +198,7 @@ html {
 
 }
 
-.containerSlide2{
-    height: 100vh;
-}
+
 
 [data-js="SecondimagensContainer"] {
     position: relative;
@@ -264,4 +269,129 @@ html {
 
 .imgAndTextContainer p {
    margin-top: 3px;
+}
+
+.containerSlide3{
+    position: relative;
+    top: -190px;
+    /* background-color: violet; */
+    margin: 0 auto;
+    /* max-width: 346px; */
+    margin-left: 10px;
+    
+}
+
+[data-js="thirdImagensContainer"] {
+    /* max-width: 420px; */
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+[data-js="thirdImagensContainer"]::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+.cards{
+    font-size: 12px;
+    min-width: 130px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    max-height: 190px;
+    min-height: 190px;
+}
+
+.cards:not(.cardOne){
+    margin-left: 10px;
+    text-align: center;
+}
+
+.cardOne p:nth-child(1){
+    font-weight: 500;
+    margin: 0px 0px 12px 0px;
+}
+
+.cardOne p:nth-child(3){
+    margin-bottom: 5px;
+    color: #0000009f;
+}
+
+.cardOne figure{
+    width: 100%;
+}
+
+.cardOne figure img{
+    width: 100%;
+}
+.cardOne figure img{
+    width: 100%;
+}
+
+.cardOne p:nth-child(4){
+    margin-bottom: 0px;
+    
+}
+
+.cardOne .preco{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    
+}
+.cardOne .preco sup{
+    font-size: 8px;
+    
+}
+
+.cardOne .frete{
+    display: flex;
+    align-items: center;
+    color: var(--greenText);
+    font-size: 10px;
+    /* background-color: var(---greenText); */
+}
+
+.cardOne .rayIcon{
+    font-size: 14px;
+    
+}
+
+.cardOne .italic{
+   font-style: italic;
+}
+
+
+.iconContainer {
+    margin: 10px 0px;
+}
+
+.iconContainer img {
+    width: 65%;
+ 
+}
+
+.blueTitle {
+    margin:0px;
+    color: var(--blueText);
+}
+
+.description {
+    margin: 0px 0px 15px 0px;
+}
+.blueButton {
+    width: 90%;
+    color: white;
+    border: none;
+    background-color: var(--blueText);
+    height: 20px;
+    border-radius: 3px;
+ 
+}
+
+.compra {
+    margin: 0px;
 }
