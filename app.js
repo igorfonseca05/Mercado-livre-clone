@@ -22,32 +22,40 @@ const moveImagens = (imgContainer, items) => {
 
 
     let startX;
+    let right;
 
     imgContainer.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX
     })
 
+    let scrollX;
+    let direction
 
-    const move = (e) => {
-        if (startX !== null) {
-            let right = e.touches[0].clientX
+    const move =  (e) => {
+        scrollX = imgContainer.scrollLeft
+
+        if (startX !== null && scrollX > 10) {
+            right = e.touches[0].clientX
             let diff = startX - right
 
-            let direction = diff >= 0 ? 1 : -1
+            direction = diff >= 0 ? -1 : 1
 
-            console.log(direction)
+            // console.log(imgContainer.scrollWidth - scrollX)
+            // console.log(imgContainer.clientWidth - scrollX)
 
-            imgContainer.scrollBy({left: `${sizeImgContainer * direction}`, behavior: 'smooth'});
-    
+
+            items.forEach(img => {
+                img.style.transform = `translateX(${(sizeImgContainer- scrollX) * direction}px)`
+            })
+            // console.log(imgContainer.clientWidth, scrollX)
+
         }
     }
 
-
-    imgContainer.addEventListener('touchmove', debounce((e)=> {move(e)}, 1))
+    imgContainer.addEventListener('touchmove', debounce((e)=> {move(e)}, 15))
 
     imgContainer.addEventListener('touchend', (e) => {
-        // imgContainer.scrollBy({left: `${0}px`, behavior: 'smooth'});
-        startX = null
+        startX = null;
     })
 
 }
@@ -79,4 +87,38 @@ const createslide = () => {
 }
 
 
+const createslide2 = () => {
+    const imgContainer = document.querySelector('[data-js="SecondimagensContainer"]')
+
+    const imagens = [
+        { id: 1, url: "img/oi.png" },
+        { id: 2, url: "img/oi.png" },
+        { id: 3, url: "img/oi.png" },
+        { id: 4, url: "img/oi.png" },
+        { id: 5, url: "img/oi.png" },
+        { id: 1, url: "img/oi.png" },
+        { id: 2, url: "img/oi.png" },
+        { id: 3, url: "img/oi.png" },
+        { id: 4, url: "img/oi.png" },
+        { id: 5, url: "img/oi.png" },
+    ]
+
+    const textos = ['Mercado Pago', 'Ofertas', 'Mercado Play', 'Cupons', 'Celulares']
+
+    imagens.forEach(img => {
+        imgContainer.innerHTML +=
+        `<div class='imgAndTextContainer'>
+        <div class='circImg'>
+         <img src=${img.url}>
+         </div>
+         <p>${textos[img.id]}</p>
+        
+        </div>`
+    })
+
+    let items = document.querySelectorAll('.item')
+}
+
+
+createslide2()
 createslide()

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide com Efeito de Deslize</title>
+    <style>
+        #slideContainer {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #slides {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slide {
+            width: 100vw; /* Largura total da janela */
+            flex: 0 0 auto;
+            height: 100vh; /* Altura total da janela */
+        }
+    </style>
+</head>
+<body>
+
+<div id="slideContainer" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd()">
+    <div id="slides">
+        <div class="slide" style="background-color: red;"></div>
+        <div class="slide" style="background-color: green;"></div>
+        <div class="slide" style="background-color: blue;"></div>
+    </div>
+</div>
+
+<script>
+    var slideContainer = document.getElementById('slideContainer');
+    var slides = document.getElementById('slides');
+    var touchStartX;
+    var touchMoveX;
+
+    function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+    }
+
+    function handleTouchMove(event) {
+        if (touchStartX != null) {
+            touchMoveX = event.touches[0].clientX;
+            var offsetX = touchMoveX - touchStartX;
+
+            // Mover o slide durante o arrasto
+            slides.style.transform = 'translateX(' + offsetX + 'px)';
+        }
+    }
+
+    function handleTouchEnd() {
+        if (touchStartX != null && touchMoveX != null) {
+            var deltaX = touchMoveX - touchStartX;
+
+            // Se o deslocamento for grande o suficiente, mova o slide completamente
+            if (Math.abs(deltaX) > 100) {
+                if (deltaX > 0) {
+                    // Mova para o slide anterior
+                } else {
+                    // Mova para o próximo slide
+                }
+            }
+        }
+
+        // Limpar as variáveis
+        touchStartX = null;
+        touchMoveX = null;
+
+        // Reiniciar a posição do slide
+        slides.style.transform = 'translateX(0)';
+    }
+</script>
+
+</body>
+</html>
