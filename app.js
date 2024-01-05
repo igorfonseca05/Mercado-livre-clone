@@ -5,6 +5,7 @@ const moveImagens = (imgContainer, items) => {
 
     const sizeImgContainer = Math.ceil(imgContainer.clientWidth)
 
+
     function debounce(func, delay) {
         let timeoutId;
 
@@ -40,6 +41,7 @@ const moveImagens = (imgContainer, items) => {
 
             direction = diff >= 0 ? -1 : 1
 
+            console.log(sizeImgContainer)
             items.forEach(img => {
                 img.style.transform = `translateX(${(sizeImgContainer) * direction}px)`
             })
@@ -58,7 +60,7 @@ const templeteToBeRender = (imagens, imgContainer, textos) => {
         imagens.forEach(img => {
             imgContainer.innerHTML += 
             `<div class='imgAndTextContainer'>
-            <div class='circImg'>
+            <div class='circImg ${img.id} '>
             <img src=${img.url}>
             </div>
             <p>${textos[img.id]}</p>
