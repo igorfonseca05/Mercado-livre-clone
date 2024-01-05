@@ -224,7 +224,7 @@ html {
     margin-left: 0px;
     overflow-x: scroll;
     /* background-color: aquamarine; */
-    padding-left: 0px;
+    padding-left: 12px;
     
 }
 
@@ -293,7 +293,7 @@ html {
 .containerSlide3{
     position: relative;
     top: -190px;
-    background-color: rgb(130, 238, 166);
+    background-color: rgb(216, 184, 42);
     margin: 0 auto;
     /* max-width: 346px; */
     
