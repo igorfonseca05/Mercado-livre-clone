@@ -103,7 +103,7 @@ const slideOne = ()=>{
 
 
 const slideTwo = () =>{
-    
+
     const textos = ['Mercado Pago', 'Ofertas', 'Mercado Play', 'Cupons', 'Celulares']
 
     const slideImgOTwo = [
@@ -121,6 +121,7 @@ const slideTwo = () =>{
     
     createSlides(slideImgOTwo, 'SecondimagensContainer', textos)
 }
+
 
 
 slideOne()

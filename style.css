@@ -203,7 +203,7 @@ html {
     margin: 0 auto;
     margin-left: 0px;
     overflow-x: scroll;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     
 }
 
@@ -218,8 +218,25 @@ html {
     align-items: center;
     text-align: center;
     /* justify-content: center; */
-    margin-right: 10px;
-    padding-left: 6px;
+    /* margin-right: 10px; */
+    padding: 0px 6px;
+    /* margin: 0 auto; */  
+}
+
+.imgAndTextContainer:nth-child(1){
+    /* background-color: #a36f28; */
+    margin-left: 3px;
+    
+}
+
+
+.imgAndTextContainer:nth-child(2)::before{
+    position: absolute;
+    content: 'NOVO';
+    width: 50px;
+    top: 32px;border-radius: 10px;
+    color: white;
+    background-color: rgb(52, 64, 226);
     
 }
 
@@ -236,7 +253,15 @@ html {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
 }
 
+.imgAndTextContainer:nth-child(2) .circImg{
+  border: 2px solid rgb(52, 64, 226);
+}
+
 [data-js="SecondimagensContainer"] img {
     width: 50%; 
 
+}
+
+.imgAndTextContainer p {
+   margin-top: 3px;
 }
