@@ -141,7 +141,7 @@ html {
     scrollbar-width: thin;
     border-radius: 10px;
     /* max-width: 346px; */
-    min-width: 338px;
+    min-width: 345px;
     height: 158.22px;
     margin: 0 auto;
 }
@@ -187,8 +187,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width:338px ;
+    /* width: 90%; */
+    max-width:345px ;
     /* background-color: rgb(22, 115, 197); */
     border-radius: 2px;
     background-color: #ffffff;
@@ -251,7 +251,7 @@ html {
 
 .imgAndTextContainer:nth-child(1){
     /* background-color: #a36f28; */
-    margin-left: 12px;
+    margin-left: 0px;
     
 }
 
