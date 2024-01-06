@@ -318,7 +318,6 @@ html {
 
 }
 
-
 .cards{
     font-size: 12px;
     min-width: 130px;
@@ -526,7 +525,7 @@ html {
     margin: 0px !important;
     /* padding: 0px; */
     /* height: 30px; */
-    padding: 5px;
+    padding: 9px 0px;
     /* background-color: #0f9e54; */
     border-top: 1px solid rgba(131, 131, 131, 0.24);
     font-weight: 500;
@@ -537,6 +536,10 @@ html {
 .assinarInternalText{
     display: flex;
     align-items: center;
+}
+
+.assinarInternalText sup{
+    margin: 9px 4px 0px 0px;
 }
 
 .assinarIcon{
