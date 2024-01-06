@@ -308,7 +308,7 @@ html {
     flex-direction: row;
     overflow-x: scroll;
     padding-left: 5.8%;
-    background-color: #cbf876;
+    /* background-color: #cbf876; */
     
 }
 
@@ -450,7 +450,7 @@ html {
 .buttonContainer button{
     width: 100%;
     margin: 0px;
-    height: 35px;
+    height: 40px;
     border: none;
     background-color: var(--blueText);
     color: var(--elementsColor);
