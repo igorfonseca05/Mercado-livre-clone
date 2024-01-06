@@ -335,20 +335,30 @@ html {
     text-align: center;
 }
 
-
-
-.cardOne p:nth-child(1){
+#visto {
     font-weight: 500;
     margin: 0px 0px 12px 0px;
+    font-size: 10px;
+}
+
+.cardOne p:nth-child(1){
+    font-weight: 300;
+    margin: 0px 0px 12px 0px;
+    font-size: 13px;
 }
 
 .cardOne p:nth-child(3){
     margin-bottom: 5px;
     color: #0000009f;
 }
+.cardOne sup{
+    top: -0.3em;
+
+}
 
 .cardOne figure{
     width: 100%;
+    margin: 0px 0px 10px 0px;
 }
 
 .cardOne figure img{
@@ -360,6 +370,7 @@ html {
 
 .cardOne p:nth-child(4){
     margin-bottom: 0px;
+    margin-top: 4px;
     
 }
 
@@ -370,7 +381,7 @@ html {
     
 }
 .cardOne .preco sup{
-    font-size: 8px;
+    font-size: 10px;
     
 }
 
@@ -597,10 +608,11 @@ html {
 
 .productsHeader{
     padding: 10px;
+    font-weight: 500;
 }
 
 .productsInternalTexts{
-    padding: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 8px;
 }
 
 .productsInternalTexts .preco{
@@ -625,7 +637,7 @@ del {
 .productsInternalTexts p sup{
     color: var(--greenText);
     margin-left: 2px;
-    top: -1.5em;
+    top: -0.9em;
 }
 
 .productsInternalTexts p:nth-child(1){
@@ -638,7 +650,7 @@ del {
   
 }
 .productsInternalTexts p:nth-child(3){
-    margin: 0px 0px -5px 0px;
+    margin: 4px 0px -5px 0px;
     /* background-color: #0f9e54; */
   
 }
@@ -651,4 +663,121 @@ del {
 .productsInternalTexts .italic{
    font-weight: 800;
   
+}
+
+
+.benefitsContainer{
+    position: relative;
+    top: -180px;
+    margin-bottom: 20px;
+}
+
+.benefitsContainer .row{
+    margin: 0 auto;
+    min-width: 342px;
+    height: 240px;
+    width: 80%;
+    background-color: var(--elementsColor);
+    border-radius: 5px;
+}
+
+.benefitsContainer .row p:first-child{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.123);
+    border-radius: 5px 5px 0px 0px;
+    font-weight: 600;
+}
+
+.contentOne{
+    text-align: center;
+   padding: 0px 4px 0px 12px;
+    height: 170px;
+}
+
+.contentTwo {
+    padding: 0px 12px 0px 4px;
+}
+
+.cardBeneficio{
+    margin-top: 12px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    height: 170px;
+    background-color: #01061d;
+}
+
+.bgImage{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.bgImage img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.centralIcon{
+
+    position: absolute;
+    top: 35px;
+    left: 54px;
+    width: 45px;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.gradientBlue{
+    position: absolute;
+    height: 50%;
+    top: 31px;
+    width: 100%;
+    background-image:linear-gradient(180deg, #ff478700 0%, #01061d  100%, #01061d 100%);
+}
+
+.mainText{
+    position: absolute;
+    color: white;
+    top: 90px;
+    margin: 0px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.secondParagraphs{
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    font-size: 11px;
+    margin: 0px;
+    color: gray;
+    text-align: center;
+}
+.secondParagraphs sup{
+    top: -3px;
+}
+
+.secondParagraphs2{
+    width: 100%;
+    position: absolute;
+    top: 108px;
+    font-size: 11px;
+    margin: 0px;
+    color: gray;
+    text-align: center;
+}
+
+#sup1{
+    /* top: 1px; */
+    color: black;
+}
+
+#sup2 {
+    top: -7px;
+    margin-left: 1px;
+    font-size: 11px;
 }
