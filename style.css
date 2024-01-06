@@ -308,7 +308,7 @@ html {
     flex-direction: row;
     overflow-x: scroll;
     padding-left: 18.5px;
-    /* background-color: #34fa6f; */
+    background-color: #f8cb76;
     
 }
 
@@ -436,9 +436,11 @@ html {
     max-width: 400px;
     background-color: var(--elementsColor);
     /* width: 94%; */
-    max-width: 338px;
+    /* min-width: 350px; */
     padding: 15px;
     border-radius: 10px;
+    min-width: 342px;
+    width: 80%;
 }
 
 .oi{
