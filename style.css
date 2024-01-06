@@ -306,7 +306,8 @@ html {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding-left: 12px;
+    padding-left: 20px;
+    background-color: #3483fa;
     
 }
 
