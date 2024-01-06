@@ -188,7 +188,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 345px;
+    min-width: 342px;
     margin: 0 auto;
     width: 80% ;
     /* background-color: rgb(22, 115, 197); */
@@ -226,7 +226,7 @@ html {
     margin: 0 auto;
     overflow-x: scroll;
     /* background-color: aquamarine; */
-    padding-left: 18.5px;
+    padding-left: 5.2%;
     
 }
 
