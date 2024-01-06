@@ -144,6 +144,7 @@ html {
     min-width: 345px;
     height: 158.22px;
     margin: 0 auto;
+    width: 80% ;
 }
 
 /* [data-js="imagensContainer"]::-webkit-scrollbar {
@@ -187,8 +188,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 90%; */
-    max-width:345px ;
+    min-width: 345px;
+    margin: 0 auto;
+    width: 80% ;
     /* background-color: rgb(22, 115, 197); */
     border-radius: 2px;
     background-color: #ffffff;
@@ -222,7 +224,7 @@ html {
     /* top: -180px; */
     font-size: 10px;
     margin: 0 auto;
-    margin-left: 0px;
+    margin-left: 18.5px;
     overflow-x: scroll;
     /* background-color: aquamarine; */
     /* padding-left: 4px; */
@@ -261,7 +263,7 @@ html {
     width: 50px;
     top: 35px;border-radius: 10px;
     color: white;
-    background-color: rgb(52, 64, 226);
+    background-color: rgb(52, 122, 226);
     
 }
 
@@ -307,7 +309,7 @@ html {
     flex-direction: row;
     overflow-x: scroll;
     padding-left: 20px;
-    background-color: #3483fa;
+    background-color: #34fa6f;
     
 }
 
