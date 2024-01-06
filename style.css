@@ -483,7 +483,8 @@ html {
     min-width: 342px;
     width: 80%;
     padding: 0px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1)
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    margin-bottom: 15px;
     
 }
 
@@ -508,6 +509,7 @@ html {
 .assineImagens {
     width: 120%;
 }
+
 
 .assineBody .row {
     display: flex;
@@ -547,4 +549,106 @@ html {
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+.products {
+    position: relative;
+    top: -190px;
+    /* background-color: #3483fa; */
+    display: flex;
+    justify-content: center;
+}
+
+.produtosContainer{
+    background-color: var(--elementsColor);
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* width: 90%; */
+    min-width: 342px;
+    width: 80%;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+.produtosGrid{
+    display: none;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: repeat(2, 220px);
+    /* height: 300px; */
+    /* border: 1px solid gray; */
+}
+
+.cardsProducts{
+    /* display: none; */
+    max-width: 170px;
+    min-height: 295px;
+    border: 1px solid rgba(134, 134, 134, 0.082);
+    padding: 2px;
+    border-radius: 0px;
+
+}
+.cardsProducts figure img{
+    background-color: rgba(224, 27, 27, 0.815);
+}
+
+.productsHeader{
+    padding: 10px;
+}
+
+.productsInternalTexts{
+    padding: 0px 0px 0px 5px;
+}
+
+.productsInternalTexts .preco{
+    /* color: #3483fa; */
+    font-size: 25px;
+}
+
+.subInfo {
+    font-size: 9px;    
+}
+.subInfo span {
+    color: var(--greenText);  
+}
+.subInfo {
+    font-size: 9px;    
+}
+
+del {
+    color: #757575;
+}
+
+.productsInternalTexts p sup{
+    color: var(--greenText);
+    margin-left: 2px;
+    top: -1.5em;
+}
+
+.productsInternalTexts p:nth-child(1){
+    margin: 0px 0px 6px 0px;
+  
+}
+.productsInternalTexts p:nth-child(2){
+    margin: 0px 0px -8px 0px;
+ 
+  
+}
+.productsInternalTexts p:nth-child(3){
+    margin: 0px 0px -5px 0px;
+    /* background-color: #0f9e54; */
+  
+}
+
+.productsInternalTexts .frete{
+    margin: 10px 0px 0px 0px;
+    /* background-color: #0f9e54; */
+  
+}
+.productsInternalTexts .italic{
+   font-weight: 800;
+  
 }
