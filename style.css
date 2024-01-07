@@ -47,14 +47,39 @@ html {
     padding: 0px;
 }
 
+
 .inputElements {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     background-color: white;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
 }
+
+.inputElements span,
+.conteinerIcons>div:nth-child(2),
+[data-js="imagensContainer"],
+.infosFrete,
+.infosFrete div,
+.containerSlide2,
+[data-js="SecondimagensContainer"],
+.imgAndTextContainer,
+.circImg,
+[data-js="thirdImagensContainer"],
+.cardOne .frete,
+.assineBody .row,
+.assinarInternalText,
+.assinarIcon,
+.products,
+.produtosContainer,
+.benefitsContainer .row p:first-child,
+.categoriaContainer .row>p,
+.cardsContainer,
+.textsCard a,
+.slide4Container {
+    display: flex;
+}
+
 
 .inputElements span {
     width: 24px;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
@@ -91,7 +116,6 @@ html {
 }
 
 .conteinerIcons>div:nth-child(2) {
-    display: flex;
     align-items: center;
 
 }
@@ -117,33 +141,38 @@ html {
 }
 
 .gradient {
+    display: none;
     position: relative;
     margin-top: 25px;
     height: 190px;
     background-image: linear-gradient(180deg, #ffeb3b 50%, #ebebeb 92%);
 }
 
+.slideOneContainer{
+    display: flex;
+    margin: 0 auto;
+}
+
 .slide {
     position: relative;
     top: -200px;
-    /* background-color: rebeccapurple;  */
+    background-color: rebeccapurple; 
     margin: 0px;
     padding: 0px;
     margin: 0 auto;
+    width: 100%;
 
 }
 
 [data-js="imagensContainer"] {
-    display: flex;
     padding: 0;
-    /* overflow-x: scroll; */
-    scrollbar-width: thin;
+    overflow-x: scroll;
     border-radius: 10px;
     /* max-width: 346px; */
     min-width: 345px;
     height: 158.22px;
+    width: 100%;
     margin: 0 auto;
-    width: 80%;
 }
 
 /* [data-js="imagensContainer"]::-webkit-scrollbar {
@@ -152,7 +181,6 @@ html {
 } */
 
 [data-js="imagensContainer"] img {
-    min-width: 338px;
     width: 100%;
     height: 100%;
     transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -160,31 +188,33 @@ html {
 }
 
 .item {
+    min-width: 345px;
     max-width: 100%;
     transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin: 0px 20px 0px 0px;
+    margin: 0px 15px;
+    padding: 0px 0px ;
     /* transform: translateX(-5px); */
 }
 
 
 
 .item:first-child {
-    margin-left: -106%;
+    /* margin-left: -100%; */
 }
 
 .infosFrete {
-    display: flex;
     justify-content: center;
     /* margin: 0 auto; */
     font-size: 10px;
-    height: 20px;
+    /* height: 20px; */
     /* text-align: center; */
     margin-top: 5px;
     /* width: 350px; */
 }
 
+
 .infosFrete div {
-    display: flex;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     justify-content: center;
     align-items: center;
     min-width: 342px;
@@ -193,7 +223,6 @@ html {
     /* background-color: rgb(22, 115, 197); */
     border-radius: 2px;
     background-color: #ffffff;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
     padding: 3px;
 }
 
@@ -212,7 +241,6 @@ html {
 .containerSlide2 {
     /* background-color: #0f9e54;  */
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
     top: -190px;
@@ -220,7 +248,6 @@ html {
 
 [data-js="SecondimagensContainer"] {
     position: relative;
-    display: flex;
     /* top: -180px; */
     font-size: 10px;
     margin: 0 auto;
@@ -236,7 +263,6 @@ html {
 }
 
 .imgAndTextContainer {
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -267,8 +293,9 @@ html {
 
 }
 
+
 .circImg {
-    display: flex;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -277,7 +304,6 @@ html {
     /* margin-right: 10px; */
     min-width: 46px;
     height: 46px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1)
 }
 
 .imgAndTextContainer:nth-child(2) .circImg {
@@ -305,7 +331,6 @@ html {
 
 [data-js="thirdImagensContainer"] {
     /* max-width: 420px; */
-    display: flex;
     flex-direction: row;
     overflow-x: scroll;
     padding-left: 5.8%;
@@ -390,7 +415,6 @@ html {
 }
 
 .cardOne .frete {
-    display: flex;
     align-items: center;
     color: var(--greenText);
     font-size: 10px;
@@ -448,7 +472,9 @@ html {
     /* background-color: #0f9e54; */
 }
 
+
 .loginContainer {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     margin: 0 auto;
     max-width: 400px;
     background-color: var(--elementsColor);
@@ -458,7 +484,6 @@ html {
     border-radius: 7px;
     min-width: 342px;
     width: 80%;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1)
 }
 
 .oi {
@@ -490,7 +515,9 @@ html {
     text-decoration: none;
 }
 
+
 .assineContainer {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     margin: 0 auto;
     position: relative;
     top: -190px;
@@ -499,7 +526,6 @@ html {
     min-width: 342px;
     width: 80%;
     padding: 0px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     margin-bottom: 15px;
 
 }
@@ -529,7 +555,6 @@ html {
 
 
 .assineBody .row {
-    display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -553,7 +578,6 @@ html {
 }
 
 .assinarInternalText {
-    display: flex;
     align-items: center;
 }
 
@@ -563,7 +587,6 @@ html {
 
 .assinarIcon {
     padding: 0px;
-    display: flex;
     align-items: center;
     justify-content: end;
 }
@@ -572,15 +595,15 @@ html {
     position: relative;
     top: -190px;
     /* background-color: #3483fa; */
-    display: flex;
     justify-content: center;
 
 }
 
+
 .produtosContainer {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     background-color: var(--elementsColor);
     /* padding: 10px; */
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     /* width: 90%; */
@@ -588,7 +611,6 @@ html {
     width: 80%;
     margin: 0px;
     border-radius: 5px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
 
 .produtosGrid {
@@ -687,18 +709,18 @@ del {
 
 }
 
+
 .benefitsContainer .row {
     margin: 0 auto;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     min-width: 342px;
     height: 240px;
     width: 80%;
     background-color: var(--elementsColor);
     border-radius: 5px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
 
 .benefitsContainer .row p:first-child {
-    display: flex;
     align-items: center;
     margin: 0px;
     border-bottom: 1px solid rgba(134, 134, 134, 0.123);
@@ -815,7 +837,6 @@ del {
 }
 
 .categoriaContainer .row>p {
-    display: flex;
     align-items: center;
     margin: 0px;
     height: 40px;
@@ -824,7 +845,6 @@ del {
 }
 
 .cardsContainer {
-    display: flex;
     flex-wrap: wrap;
     /* background-color: #3483fa; */
     margin: 5px 0px;
@@ -911,7 +931,6 @@ del {
 }
 
 .textsCard a {
-    display: flex;
     align-items: center;
     text-decoration: none;
     color: #000000;
@@ -925,7 +944,7 @@ del {
     top: -180px;
     background-color: var(--blueText);
     padding: 0px;
-
+    
 }
 
 .containerSlide4 .row{
@@ -938,9 +957,9 @@ del {
 }
 
 .slide4Container{
-    display: flex;
     overflow-x: scroll;
 }
+
 .slide4Container::-webkit-scrollbar{
     display: none;
 }
@@ -955,8 +974,7 @@ del {
 }
 .firstp{
     font-weight: 400;
-    font-size: 20px;
-   
+    font-size: 20px;  
 }
 
 .slide1 p:not(.firstp){

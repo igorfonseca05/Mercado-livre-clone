@@ -33,7 +33,10 @@ const moveImagens = (imgContainer, items) => {
     let direction
 
 
+    console.log(sizeImgContainer)
+
     imgContainer.addEventListener('touchmove', (e) => {
+        
 
         if (startX !== null) {
             right = e.touches[0].clientX
@@ -129,6 +132,6 @@ const slide4 = () => {
     
 }
 
-slide4()
+// slide4()
 slideOne()
 slideTwo()
