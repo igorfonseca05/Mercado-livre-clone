@@ -124,7 +124,11 @@ const slideTwo = () =>{
     createSlides(slideImgOTwo, 'SecondimagensContainer', textos)
 }
 
+const slide4 = () => {
+    const slides = document.querySelector('[data-js="slide4Container"]')
+    
+}
 
-
-// slideOne()
+slide4()
+slideOne()
 slideTwo()
