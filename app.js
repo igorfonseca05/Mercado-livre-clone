@@ -1,59 +1,6 @@
 
 let startX;
 
-const moveImagens = (imgContainer, items) => {
-
-    const sizeImgContainer = Math.ceil(imgContainer.clientWidth)
-
-
-    function debounce(func, delay) {
-        let timeoutId;
-
-        return function () {
-            const context = this;
-            const args = arguments;
-
-            clearTimeout(timeoutId);
-
-            timeoutId = setTimeout(function () {
-                func.apply(context, args);
-            }, delay);
-        };
-    }
-
-
-    let startX;
-    let right;
-
-    imgContainer.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX
-    })
-
-    let scrollX;
-    let direction
-
-
-    imgContainer.addEventListener('touchmove', (e) => {
-
-        if (startX !== null) {
-            right = e.touches[0].clientX
-            let diff = startX - right
-
-            direction = diff >= 0 ? -1 : 1
-
-            console.log(sizeImgContainer)
-            items.forEach(img => {
-                img.style.transform = `translateX(${(sizeImgContainer) * direction}px)`
-            })
-
-        }
-    })
-
-    imgContainer.addEventListener('touchend', (e) => {
-        startX = null;
-    })
-
-}
 
 const templeteToBeRender = (imagens, imgContainer, textos) => {
     if(imagens[0].p) {
@@ -90,16 +37,14 @@ const createSlides = (imagesSlide, containerSlide, textos = '') => {
 
 const slideOne = ()=>{
     const slideImgOne = [
-        { id: 1, url: "img/1.jpeg" },
-        { id: 2, url: "img/2.jpeg" },
-        { id: 3, url: "img/3.jpeg" },
-        { id: 4, url: "img/4.jpeg" },
-        { id: 5, url: "img/5.jpeg" },
+        { id: 0, url: "img/1.jpeg" },
+        { id: 1, url: "img/2.jpeg" },
+        { id: 2, url: "img/3.jpeg" },
+        { id: 3, url: "img/4.jpeg" },
+        { id: 4, url: "img/5.jpeg" },
     ]
 
     const [imgContainer, items] = createSlides(slideImgOne, 'imagensContainer')
-
-    moveImagens(imgContainer, items)
 }
 
 
@@ -127,5 +72,5 @@ const slideTwo = () =>{
 
 
 
-// slideOne()
+slideOne()
 slideTwo()
