@@ -6,13 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Secondstyle.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/Secondstyle.css">
+    <link rel="stylesheet" href="styles/novoStyle.css">
     <title>Document</title>
 </head>
 <body> 
     <header  class="container.fluid bgContainer">
-        <div class="row">
+        <div class="row d-sm-none">
             <div class="col-12 lineOne">
                 <div class="row">
                     <div class="col-2 colLogo" >
@@ -46,8 +47,79 @@
             </div>
             <div class="col-12 gradient"></div>
         </div>
+        <div class="container-fluid menu-desktop pt-1">
+            <div class="row text-end align-items-center">
+                <div style="cursor: pointer;" class="col-2">
+                    <img class="img-fluid" src="img/mercado-icon.png" alt="">
+                </div>
+                <div class="col-6">
+                   <div style="background-color: white; box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);width: 90%;" class="d-flex align-items-center">
+                       <input style="height: 40px" class="searchInput" type="text" placeholder="Estou buscando">
+                       <span style="border-left: 1px solid rgba(0, 0, 0, 0.247); padding: 5px; color: rgba(0, 0, 0, 0.411);cursor: pointer;" class="material-symbols-outlined">search</span>
+                    </div>
+                </div>
+                <div style="cursor: pointer;" class="col-4 text-start">
+                    <img class="img-fluid" src="img/mercado-icon2.png" alt="">
+                </div>
+            </div>
+            <div style="height: 65px;" class="row text-start align-items-center">
+                <div class="col-2">
+                     <div class="row">
+                        <div class="col-5 p-0 text-end">
+                            <span style="color: rgba(0, 0, 0, 0.5); transform: translateY(10px);" class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div class="col-7 p-0">
+                            <p class="p-0"><span style="font-size: 14px; color: rgba(0, 0, 0, 0.562);">Informe seu</span></p>
+                            <p style="transform: translateY(-24px);">CEP</p>
+                        </div>
+                     </div>
+                </div>
+                <div class="col-6 ">
+                    <ul style="font-size: 14px; padding-bottom: 14px !important;" class="MenuUl p-0">
+                        <li>
+                            <div class="dropdown">
+                                <button style="font-size: 14px;"  class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown">
+                                  Categorias
+                                </button>
+                                <ul  class="dropdown-menu dropdown-menu-dark">
+                                  <li><a class="dropdown-item" href="#">Veiculos</a></li>
+                                  <li><a class="dropdown-item" href="#">Supermercado</a></li>
+                                  <li><a class="dropdown-item" href="#">Casa e Móveis</a></li>
+                                  <li><a class="dropdown-item" href="#">Eletrodomésticos</a></li>
+                                </ul>
+                              </div>
+                        </li>
+                        <li><a href="#">Ofertas do dia</a></li>
+                        <li><a href="#">Histórico</a></li>
+                        <li><a href="#">Moda</a></li>
+                        <li><a href="#">Mercado Play</a></li>
+                        <li><a href="#">Vender</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul style="font-size: 14px; padding-bottom: 14px !important;" class="MenuUl px-0 justify-content-center">
+                        <li class="px-2"><a href="#">Crie sua conta</a></li>
+                        <li class="px-2"><a href="#">Entre</a></li>
+                        <li class="px-2"><a href="#">Compras</a></li>
+                        <li class="px-2">
+                            <span style="cursor: pointer; color: rgba(0, 0, 0, 0.671);" class="material-symbols-outlined">
+                                shopping_cart
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
-    <div  class="container slide ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <img class="img-fluid" src="img/bg-desktop1.webp" alt="">
+            </div>
+        </div>
+    </div>
+    <div  class="container slide d-md-none ">
         <div class="row slideOneContainer">
             <div data-js="imagensContainer" class="col-12"></div>
             <!-- <div class="col-3">S</div> -->
@@ -59,10 +131,10 @@
         </div>
     </div>
     <div>
-        <div  class="containerSlide2">
+        <div  class="containerSlide2 d-md-none ">
             <div data-js="SecondimagensContainer" class="col-12"></div>
         </div>
-        <div  class="containerSlide3">
+        <div   class="containerSlide3 d-sm-none">
             <div data-js="thirdImagensContainer" class="col-12">
                 <div class="cards cardOne">
                     <p id="visto">Visto recentemente</p>
@@ -105,8 +177,8 @@
             </div>
         </div>    
     </div>
-    <div  class="container-fluid loginCard">
-        <div class="row ">
+    <div  class="container-fluid loginCard d-sm-none">
+        <div id="login-container" class="row">
             <div class="col-12 loginContainer">
                 <div class="col-12">
                     <p>Crie uma conta para melhorar sua <br> experiência</p>
@@ -120,38 +192,81 @@
             </div>
         </div>
     </div>
-    <div  class="container-fluid">
+    <div  class="container-fluid slideProducts-desktop d-md-none">
+        <div class="row">
+            <div class="col-4">
+                <div>
+                    <p>Oferta do dia</p>
+                    <div class="cards cardOne  cardsProducts">
+                        <figure class="imageContainer">
+                         <img width="150" height="150" decoding="async" src='img/prod3.jpeg' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p>Notebook Samsung Galaxy Book Go...</p>
+                             <p><del>R$ 1.999</del></p>
+                             <p><span class="preco">R$ 1.399<sup>30% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p>
+                                 <span class="frete">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div>
+                </div>
+            </div>
+            <div class="col-8"></div>
+    </div>
+    </div>
+    <div class="container-fluid d-sm-none" >
         <div class="row">
             <div class="col-12 assineContainer">
+                <div class="col-12 assineHeader-Desktop " style="border-radius: 10px 10px 0px 0px;">
+                    <div style="min-height: 50px;" class="row px-4">
+                        <div class="col-6 py-2">Assine o <span> <img style="width: 18%;" src="img/merni.icon.png" alt=""></span></div>
+                        <div class="col-6 text-end py-4">R$ 17 <sup>99</sup>/mês</div>
+                    </div>  
+                </div>
                 <div class="col-12 assineHeader">
-                    <img src="img/assine.jpeg" alt="">
+                     <img src="img/assine.jpeg" alt=""> 
                 </div>
                 <div class="col-12 assineBody">
-                    <p>Conte com os melhores<br> benefícios no Mercado Livre e do <br> Mercado Pago</p>
-                    <div class="row">
-                        <div class="col-2">
-                            <img class="assineImagens" src="img/truck Icon.png" alt="">
+                    <p>Conte com os melhores benefícios no Mercado Livre e do Mercado Pago</p>
+                  <div id="Assinar-container">
+                      <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-2 col-md-4">
+                                <img class="assineImagens" src="img/truck Icon.png" alt="">
+                            </div>
+                            <div class="col-10 col-md-8 assinarInternalText">Frete grátis em milhões de produtos a partir de R$29</div>
                         </div>
-                        <div class="col-10 assinarInternalText">Frete grátis em milhões de produtos a partir de R$29</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <img class="assineImagens" src="img/disney.jpg" alt="">
+                      </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-2 col-md-4">
+                                    <img class="assineImagens" src="img/disney.jpg" alt="">
+                                </div>
+                                <div class="col-10 col-md-8 assinarInternalText">Disney<sup>+</sup> e Stars<sup>+</sup> sem custo</div>
+                            </div>
                         </div>
-                        <div class="col-10 assinarInternalText">Disney<sup>+</sup> e Stars<sup>+</sup> sem custo</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <img class="assineImagens" src="img/diezer.png" alt="">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-2 col-md-4">
+                                    <img class="assineImagens" src="img/diezer.png" alt="">
+                                </div>
+                                <div class="col-10 col-md-8 assinarInternalText">Deezer Premium 12 meses sem custo</div>
+                            </div>
                         </div>
-                        <div class="col-10 assinarInternalText">Deezer Premium 12 meses sem custo</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <img class="assineImagens" src="img/carro.png" alt="">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-2 col-md-4">
+                                    <img class="assineImagens" src="img/carro.png" alt="">
+                                </div>
+                                <div class="col-10 col-md-8 assinarInternalText">60% OFF no Ultrapasse e outros benefícios</div>
+                            </div>
                         </div>
-                        <div class="col-10 assinarInternalText">60% OFF no Ultrapasse e outros benefícios</div>
-                    </div>
+                  </div>
                 </div>
                 <div class="row assinarFooter">
                     <div class="col-10 assinarInternalText">Assinar o Meli+</div>
@@ -159,10 +274,20 @@
                         chevron_right
                         </span></div>
                 </div>
+                <hr class="opacityLine">
+                <div class="row assinarFooterBtn">
+                   <div class="col-12">
+                    <div class="row justify-content-end text-end px-4 ">
+                        <div class="col-4 pb-3">
+                            <a style="background-color: #3483fa; color: white;" href="" class="btn btn-lg">Assinar o Meli+</a>
+                        </div>
+                    </div>
+                   </div>
+                </div>
             </div>
         </div>
     </div>
-    <div  class="container-fluid">
+    <div  class="container-fluid d-sm-none">
         <div class="row">
             <div class="col-12 products">
                 <div class="row produtosContainer">
@@ -247,7 +372,7 @@
             </div>
         </div>
     </div>
-    <div  class="container benefitsContainer">
+    <div  class="container benefitsContainer d-sm-none">
         <div class="row ">
             <p>Benefícios em conteúdo</p>
             <div class="col-6 contentOne">
@@ -274,7 +399,7 @@
               </div>
         </div>
     </div>
-    <div  class="container-fluid">
+    <div  class="container-fluid d-sm-none">
         <div class="row">
             <div class="col-12 products">
                 <div class="row produtosContainer">
@@ -340,7 +465,7 @@
                             </div>
                         </div>
                 
-                    <div class="row assinarFooter">
+                    <div  class="row assinarFooter">
                         <div class="col-10 assinarInternalText">Ir para Mais Vendidos</div>
                         <div class="col-2 assinarIcon"><span class="material-symbols-outlined">
                             chevron_right
@@ -350,7 +475,7 @@
             </div>
         </div>
     </div>
-    <div   class="container-fluid categoriaContainer">
+    <div   class="container-fluid categoriaContainer d-sm-none">
         <div class="row">
             <div class="col-12 promocard">
                 <figure class="bgImgCard">
@@ -373,7 +498,7 @@
         </div>
     </div>
 
-    <div  class="container-fluid categoriaContainer">
+    <div  class="container-fluid categoriaContainer d-sm-none">
         <did class="row">
             <p>Categorias</p>
             <div class="col-12 cardsContainer">
@@ -434,7 +559,7 @@
             </div>
         </did>
     </div>
-    <div  class="container-fluid">
+    <div  class="container-fluid d-sm-none">
         <div class="row">
             <div style="margin-top: 10px;" class="col-12 products">
                 <div class="row produtosContainer">
@@ -515,7 +640,7 @@
         </div>
     </div>
 
-    <div class="container-fluid containerSlide4">
+    <div class="container-fluid containerSlide4 d-sm-none">
         <div class="row slide4">
            <div data-js="slide4Container" class="slide4Container">
             <div data-js="slide1" class="col-12 slide1">
@@ -546,7 +671,7 @@
            <div>abs</div>
         </div>
     </div>
-    <div class="container yellow-bar">
+    <div  class="container yellow-bar d-sm-none">
         <div class="row justify-content-center">
            <div class="infos-container-app">
             <div class="col-1 icon-marker">
@@ -560,7 +685,7 @@
            </div>
         </div>
     </div>
-    <div class="container list-footer-container">
+    <div  class="container list-footer-container d-sm-none">
         <div class="row ">
            <div class="col-6">
             <ul class="ul-Container">
@@ -583,7 +708,7 @@
         </div>
     </div>
     
-    <div class="container footer-infos">
+    <div  class="container footer-infos d-sm-none">
         <div class="row signIn-create-links justify-content-center px-5">
             <div class="col-3 links-create-signIn-footer">
                 <a href="#">Entre</a>
@@ -611,7 +736,7 @@
                </div>
             </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+
+
+@media screen and (min-width: 992px) {
+    
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .containerSlide2,
+    .infosFrete,.slide, 
+    .assinarFooter, 
+    .assineHeader,
+    .loginCard{
+        display: none;
+    }
+    
+    .assinarFooterBt, .menu-desktop{
+        display: block;
+    }
+
+    #Assinar-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .assineContainer{
+        width: 90%;
+    }
+
+    .assineHeader-Desktop{
+        background-image: linear-gradient(-90deg, #9D1593 11%, #7a1b8f 52%, #5c238e 100%) !important;
+        color: white;
+        font-weight: 600;
+        font-size: 30px;
+        display: block;
+    
+    }
+
+    .assineBody p {
+        font-size: 18px;
+    }
+
+    #btn-cep{
+        border: none;
+        padding: 0px;
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+    #btn-cep:hover{
+        border: 1px solid rgba(0, 0, 0, 0.185);
+    }
+
+    .MenuUl{
+        display: flex;
+    }
+    .MenuUl li{
+        list-style: none;
+        margin-right: 15px;
+    }
+    .MenuUl li a:not(.dropdown-item){
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.877);
+    }
+
+    .bgContainer {
+        height: 100px;
+    }
+
+    
+}
+
