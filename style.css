@@ -13,9 +13,10 @@
 
 body,
 html {
-    height: 100vh;
+    height: auto;
     overflow-x: hidden;
     background-color: #ebebeb;
+    position: relative;
 }
 
 .bgContainer {
@@ -142,7 +143,7 @@ html {
 }
 
 .gradient {
-    display: none;
+    display: block;
     position: relative;
     margin-top: 25px;
     height: 190px;
@@ -189,6 +190,7 @@ html {
     transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     /* margin: 0px 15px; */
     padding: 0px 0px ;
+    /* scroll-padding: 10px; */
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }

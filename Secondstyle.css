@@ -20,6 +20,7 @@
 .slide4Container{
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    gap: 10px;
 }
 
 .slide4Container::-webkit-scrollbar{
@@ -27,8 +28,8 @@
 }
 
 .slide1{
-    padding: 10px;
-    scroll-snap-align: start;
+    scroll-padding: 10px;
+    scroll-snap-align: center;
     scroll-snap-stop: always;
 }
 
@@ -65,7 +66,7 @@
     text-align: center;
     flex-direction: row;
     background-color: #ffeb3b;
-    height: 50px;
+    height: 70px;
     justify-content: center;
 }
 
@@ -82,8 +83,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     background-color: #ffeb3b;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.205);
     border-radius: 5px;
@@ -164,5 +165,11 @@
 .final-footer{
     font-size: 12px;
     color: rgba(0, 0, 0, 0.712);
-    padding-top: 5px;
+    padding-top: 15px;
+}
+
+.last-item{
+    position: absolute;
+    top: 50px;
+    background-color: var(--elementsColor);
 }
