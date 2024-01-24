@@ -172,4 +172,5 @@
     position: absolute;
     top: 50px;
     background-color: var(--elementsColor);
+    padding-bottom: 30px;
 }

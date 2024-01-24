@@ -6,16 +6,6 @@ const moveImagens = (imgContainer, items) => {
     const sizeImgContainer = Math.ceil(imgContainer.clientWidth)
 
 
-    let startX;
-    let right;
-
-    imgContainer.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX
-    })
-
-    let scrollX;
-    let direction
-
     function debounce(func, delay) {
         let timeoutId;
 
@@ -31,24 +21,33 @@ const moveImagens = (imgContainer, items) => {
         };
     }
 
+
+    let startX;
+    let right;
+
+    imgContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX
+    })
+
+    let scrollX;
+    let direction
+
+
     imgContainer.addEventListener('touchmove', (e) => {
-        // if(sizeImgContainer - (sizeImgContainer.scrollWidth - sizeImgContainer) > 0) return
-        // e.preventDefault()
 
         if (startX !== null) {
             right = e.touches[0].clientX
             let diff = startX - right
 
-            direction = diff >= 0 ? 1 : -1
+            direction = diff >= 0 ? -1 : 1
 
-            // console.log((sizeImgContainer) * direction)
-            items.forEach(item => {
-                item.style.transform = `translateX(${sizeImgContainer * direction})px`
+            console.log(sizeImgContainer)
+            items.forEach(img => {
+                img.style.transform = `translateX(${(sizeImgContainer) * direction}px)`
             })
-        
 
         }
-    } )
+    })
 
     imgContainer.addEventListener('touchend', (e) => {
         startX = null;
@@ -107,29 +106,26 @@ const slideOne = ()=>{
 
 const slideTwo = () =>{
 
-    const textos = ['Mercado Pago', 'Ofertas', 'Mercado Play', 'Cupons', 'Celulares']
+    const textos = ['Mercado Pago', 'Ofertas', 'Mercado Play', 'Mercado', 
+        'Moda', 'Celulares', 'Veículos', 'Lar', 'Computação', 'Ver mais'  ]
 
     const slideImgOTwo = [
-        { id: 1, url: "img/oi.png", p: true },
-        { id: 2, url: "img/oi.png", p: true },
-        { id: 3, url: "img/oi.png", p: true },
-        { id: 4, url: "img/oi.png", p: true },
-        { id: 3, url: "img/oi.png", p: true },
-        { id: 1, url: "img/oi.png", p: true },
-        { id: 2, url: "img/oi.png", p: true },
-        { id: 3, url: "img/oi.png", p: true },
-        { id: 3, url: "img/oi.png", p: true },
-        { id: 3, url: "img/oi.png", p: true },
+        { id: 0, url: "img/icon1.webp", p: true },
+        { id: 1, url: "img/icon2.webp", p: true },
+        { id: 2, url: "img/icon3.webp", p: true },
+        { id: 3, url: "img/icon4.webp", p: true },
+        { id: 4, url: "img/icon5.webp", p: true },
+        { id: 5, url: "img/icon6.webp", p: true },
+        { id: 6, url: "img/icon7.webp", p: true },
+        { id: 7, url: "img/icon8.webp", p: true },
+        { id: 8, url: "img/icon9.webp", p: true },
+        { id: 9, url: "img/icon10.webp", p: true },
     ]
     
     createSlides(slideImgOTwo, 'SecondimagensContainer', textos)
 }
 
-const slide4 = () => {
-    const slides = document.querySelector('[data-js="slide4Container"]')
-    
-}
 
-// slide4()
-slideOne()
+
+// slideOne()
 slideTwo()
