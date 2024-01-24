@@ -162,7 +162,7 @@ html {
     padding: 0px;
     margin: 0 auto;
     width: 100%;
-
+    
 }
 
 [data-js="imagensContainer"] {
@@ -178,16 +178,9 @@ html {
     scroll-snap-type: x mandatory;
 }
 
-/* [data-js="imagensContainer"]::-webkit-scrollbar {
+[data-js="imagensContainer"]::-webkit-scrollbar {
     display: none;
 
-} */
-
-[data-js="imagensContainer"] img {
-    width: 100%;
-    height: 100%;
-    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border-radius: 10px;
 }
 
 .item {
@@ -196,11 +189,16 @@ html {
     transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     /* margin: 0px 15px; */
     padding: 0px 0px ;
-    scroll-padding: 10px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
 
+[data-js="imagensContainer"] img {
+    width: 100%;
+    height: 100%;
+    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 10px;
+}
 
 .infosFrete {
     justify-content: center;
