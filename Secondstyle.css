@@ -21,6 +21,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 10px;
+    padding: 20px;
 }
 
 .slide4Container::-webkit-scrollbar{

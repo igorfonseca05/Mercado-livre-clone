@@ -2,6 +2,12 @@
 let startX;
 
 
+
+const moveImagens = () => {
+
+}
+
+
 const templeteToBeRender = (imagens, imgContainer, textos) => {
     if(imagens[0].p) {
         imagens.forEach(img => {
@@ -45,6 +51,8 @@ const slideOne = ()=>{
     ]
 
     const [imgContainer, items] = createSlides(slideImgOne, 'imagensContainer')
+
+    moveImagens(imgContainer, items)
 }
 
 
