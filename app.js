@@ -6,6 +6,16 @@ const moveImagens = (imgContainer, items) => {
     const sizeImgContainer = Math.ceil(imgContainer.clientWidth)
 
 
+    let startX;
+    let right;
+
+    imgContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX
+    })
+
+    let scrollX;
+    let direction
+
     function debounce(func, delay) {
         let timeoutId;
 
@@ -21,36 +31,24 @@ const moveImagens = (imgContainer, items) => {
         };
     }
 
-
-    let startX;
-    let right;
-
-    imgContainer.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX
-    })
-
-    let scrollX;
-    let direction
-
-
-    console.log(sizeImgContainer)
-
     imgContainer.addEventListener('touchmove', (e) => {
-        
+        // if(sizeImgContainer - (sizeImgContainer.scrollWidth - sizeImgContainer) > 0) return
+        // e.preventDefault()
 
         if (startX !== null) {
             right = e.touches[0].clientX
             let diff = startX - right
 
-            direction = diff >= 0 ? -1 : 1
+            direction = diff >= 0 ? 1 : -1
 
-            console.log(sizeImgContainer)
-            items.forEach(img => {
-                img.style.transform = `translateX(${(sizeImgContainer) * direction}px)`
+            // console.log((sizeImgContainer) * direction)
+            items.forEach(item => {
+                item.style.transform = `translateX(${sizeImgContainer * direction})px`
             })
+        
 
         }
-    })
+    } )
 
     imgContainer.addEventListener('touchend', (e) => {
         startX = null;
