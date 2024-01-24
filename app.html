@@ -1,79 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide com Efeito de Deslize</title>
+    <title>Slide Show</title>
     <style>
-        #slideContainer {
+        body {
+            margin: 0;
             overflow: hidden;
-            white-space: nowrap;
         }
 
-        #slides {
+        .slide-container {
             display: flex;
-            transition: transform 0.3s ease-in-out;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            width: 500px;
+            /* height: 500px; */
         }
 
-        .slide {
-            width: 100vw; /* Largura total da janela */
-            flex: 0 0 auto;
-            height: 100vh; /* Altura total da janela */
+        .slides {
+            display: flex;
+            scroll-snap-align: start;
+        }
+
+        img {
+            width: 100%;
+            /* height: 100vh; */
+            /* object-fit: cover; */
         }
     </style>
+
 </head>
+
 <body>
-
-<div id="slideContainer" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd()">
-    <div id="slides">
-        <div class="slide" style="background-color: red;"></div>
-        <div class="slide" style="background-color: green;"></div>
-        <div class="slide" style="background-color: blue;"></div>
+    <div class="slide-container">
+        <div class="slides">
+            <img src="img/1.jpeg" alt="Imagem 1">
+            <img src="img/2.jpeg" alt="Imagem 2">
+            <img src="img/3.jpeg" alt="Imagem 3">
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
     </div>
-</div>
 
-<script>
-    var slideContainer = document.getElementById('slideContainer');
-    var slides = document.getElementById('slides');
-    var touchStartX;
-    var touchMoveX;
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.slide-container');
 
-    function handleTouchStart(event) {
-        touchStartX = event.touches[0].clientX;
-    }
+            let isScrolling;
 
-    function handleTouchMove(event) {
-        if (touchStartX != null) {
-            touchMoveX = event.touches[0].clientX;
-            var offsetX = touchMoveX - touchStartX;
+            container.addEventListener('scroll', function () {
+                clearTimeout(isScrolling);
 
-            // Mover o slide durante o arrasto
-            slides.style.transform = 'translateX(' + offsetX + 'px)';
-        }
-    }
+                isScrolling = setTimeout(function () {
+                    // Adicione lógica para determinar qual imagem está no centro da tela
+                    // e ajuste o scroll para alinhá-la corretamente
+                    const centerImage = determineCenterImage();
+                    container.scrollLeft = centerImage.offsetLeft;
+                }, 500);
+            });
+        });
 
-    function handleTouchEnd() {
-        if (touchStartX != null && touchMoveX != null) {
-            var deltaX = touchMoveX - touchStartX;
+        function determineCenterImage() {
+            const container = document.querySelector('.slide-container');
+            const scrollLeft = container.scrollLeft;
+            const images = document.querySelectorAll('.slides img');
 
-            // Se o deslocamento for grande o suficiente, mova o slide completamente
-            if (Math.abs(deltaX) > 100) {
-                if (deltaX > 0) {
-                    // Mova para o slide anterior
-                } else {
-                    // Mova para o próximo slide
+            for (const image of images) {
+                const imageLeft = image.offsetLeft;
+                const imageWidth = image.offsetWidth;
+             
+                if (scrollLeft >= imageLeft && scrollLeft < imageLeft + imageWidth) {
+                    return image;
                 }
             }
         }
 
-        // Limpar as variáveis
-        touchStartX = null;
-        touchMoveX = null;
 
-        // Reiniciar a posição do slide
-        slides.style.transform = 'translateX(0)';
-    }
-</script>
-
+    </script>
 </body>
+
 </html>

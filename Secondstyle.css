@@ -1,0 +1,168 @@
+
+.containerSlide4{
+    position: relative;
+    top: -180px;
+    background-color: var(--blueText);
+    padding: 0px;
+   
+}
+
+.containerSlide4 .row{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 384px;
+    background-color: var(--elementsColor);
+    margin: 0px;
+
+}
+
+.slide4Container{
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.slide4Container::-webkit-scrollbar{
+    display: none;
+}
+
+.slide1{
+    padding: 10px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.slide1 p{
+    margin: 0px;
+    
+}
+.firstp{
+    font-weight: 400;
+    font-size: 20px;  
+}
+
+.slide1 p:not(.firstp){
+    padding: 5px;
+   font-size: 14px;
+
+}
+
+.slide1 p:nth-child(3){
+    margin: 0 auto;
+   width: 90%;
+
+}
+
+.slide1 img{
+   width: 30%;
+
+}
+
+.yellow-bar {
+    position: relative;
+    top: -180px;
+    padding: 0px;
+    text-align: center;
+    flex-direction: row;
+    background-color: #ffeb3b;
+    height: 50px;
+    justify-content: center;
+}
+
+.infos-container-app{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.container-img-mercadoLivre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #ffeb3b;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.205);
+    border-radius: 5px;
+}
+
+.container-img-mercadoLivre img {
+    width: 90%;
+    /* background-color: yellow; */
+}
+
+.list-footer-container{
+    position: relative;
+    top: -180px;
+    padding: 20px;
+    font-size: 14px;
+    background-color: var(--elementsColor);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+.ul-Container {
+    padding-left: 10px !important;
+}
+
+.list-footer-container ul li{
+    list-style: none;
+    padding: 10px 0px;
+}
+
+.footer-infos{
+    position: relative;
+    top: -180px;
+    padding: 0px;
+    background-color: var(--elementsColor);
+}
+
+.signIn-create-links{
+    padding: 20px 0px;
+
+}
+
+.links-create-signIn-footer a{
+    text-decoration: none;
+    font-size: 14px;
+    text-align: start;
+    /* padding: 0px !important; */
+}
+
+.links-create-signIn-footer:first-child{
+    padding:0px;
+}
+
+.links-create-signIn-footer:first-child a{
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    padding-right: 25px;
+}
+
+.subset-links{
+    /* padding-left: 24px; */
+    font-size: 12px;
+    
+}
+.subset-links a{
+    /* padding-left: 24px; */
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.836);
+    padding-right: 2px;
+   
+}
+
+#Acessibilidade {
+    padding-left: 24px;
+    background-image: url("https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.10/mercadolibre/accessibility.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 16px;
+}
+
+.final-footer{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.712);
+    padding-top: 5px;
+}

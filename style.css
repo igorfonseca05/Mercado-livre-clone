@@ -73,7 +73,8 @@ html {
 .categoriaContainer .row>p,
 .cardsContainer,
 .textsCard a,
-.slide4Container {
+.slide4Container,
+.yellow-bar {
     display: flex;
 }
 
@@ -156,7 +157,7 @@ html {
 .slide {
     position: relative;
     top: -200px;
-    background-color: rebeccapurple; 
+    /* background-color: rebeccapurple;  */
     margin: 0px;
     padding: 0px;
     margin: 0 auto;
@@ -197,7 +198,7 @@ html {
     padding: 0px 0px ;
     scroll-padding: 10px;
     scroll-snap-align: start;
-    scroll-snap-stop: end;
+    scroll-snap-stop: always;
 }
 
 
@@ -935,61 +936,5 @@ del {
     color: #000000;
     font-weight: 600;
     font-size: 10px;
-
-}
-
-.containerSlide4{
-    position: relative;
-    top: -180px;
-    background-color: var(--blueText);
-    padding: 0px;
     
 }
-
-.containerSlide4 .row{
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 384px;
-    background-color: var(--elementsColor);
-    margin: 0px;
-}
-
-.slide4Container{
-    overflow-x: scroll;
-}
-
-.slide4Container::-webkit-scrollbar{
-    display: none;
-}
-
-.slide1{
-    padding: 10px;
-}
-
-.slide1 p{
-    margin: 0px;
-    
-}
-.firstp{
-    font-weight: 400;
-    font-size: 20px;  
-}
-
-.slide1 p:not(.firstp){
-    padding: 5px;
-   font-size: 14px;
-
-}
-
-.slide1 p:nth-child(3){
-    margin: 0 auto;
-   width: 90%;
-
-}
-
-.slide1 img{
-   width: 30%;
-
-}
-
