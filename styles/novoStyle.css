@@ -1,20 +1,15 @@
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 500px) {
     
     *{
         padding: 0;
         margin: 0;
     }
-    .containerSlide2,
-    .infosFrete,.slide, 
-    .assinarFooter, 
-    .assineHeader,
-    .loginCard{
-        display: none;
-    }
     
-    .assinarFooterBt, .menu-desktop{
+    .assinarFooterBt, 
+    .menu-desktop,
+    #container-slide-fullscreen{
         display: block;
     }
 
@@ -56,6 +51,7 @@
         list-style: none;
         margin-right: 15px;
     }
+
     .MenuUl li a:not(.dropdown-item){
       text-decoration: none;
       color: rgba(0, 0, 0, 0.877);
@@ -63,6 +59,412 @@
 
     .bgContainer {
         height: 100px;
+    }
+
+    /* Config slide desktop */
+  
+    .slide-full-screean .containerImages{
+        /* width: 1200px !important; */
+        display: flex;
+        cursor: pointer;
+      
+    }
+
+
+    .itemFullScreean {
+        width: 100vw;
+        
+    }
+
+    .itemFullScreean img {
+        width: 100vw;
+    }
+
+
+    .itemFullScreean{
+        transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    
+    .itemFullScreean:first-child{
+        margin-left: -100%;
+    }
+
+    
+    #slideButton {
+        position: absolute;
+        top: calc(40%);
+        z-index: 3;
+        width: 50px;
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        border: none;
+        color: #3483fa;
+        background-color: white;
+    }
+    
+    
+    #slideButton:first-child {
+        border-radius: 0px 30px 30px 0px;
+        height: 64px;
+        justify-content: end;
+        padding-right: 15px;
+        
+    }
+
+    #slideButton:last-child {
+        right: 0px;
+        border-radius: 30px 0px 0px 30px;
+        height: 64px;
+        padding-left: 15px;
+    }
+
+    .previous-Button, .next-Button{
+        font-size: 30px;
+    }
+
+    .markImg-point{
+        display: flex;
+        /* background-color: aqua; */
+        justify-content: center;
+        top: 65%;
+        position: absolute;
+    }
+
+    .markImg-point li{
+        list-style: none;
+        margin-right: 5px;
+        width: 6px;
+        height: 6px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ball {
+        background-color: #79797981;
+        /* background-color: blanchedalmond; */
+        width: 6px;
+        height: 6px;
+        display: block;
+        border-radius: 50%;
+        border: 1px solid rgb(255, 255, 255);
+    }
+    
+    .activeMarker {
+        background-color: #ffffff;
+        /* transform: scale(1.4); */
+        border: 1px solid #8f8f8f;
+        animation: growPoint 0.4s ease-in-out forwards;
+    }
+
+    @keyframes growPoint {
+        from{
+            transform: scale(1);
+            background-color: #7d7d7e46;
+        } to {
+            transform: scale(1.5);
+            /* background-color: #7d7d7e46; */
+        };
+    }
+
+.slidetwo-fullscreen {
+    margin: 0 auto;
+    max-width: 88% !important;
+    padding: 0px !important;
+    height: 279px;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+#container-slides2-fullScreen {
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    scroll-padding: 0px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+#container-slides2-fullScreen .card-fullscreen {
+    min-width: 183px !important;
+    min-height: 279px !important;
+    margin-left: 0px;
+    font-size: 14px;
+    box-shadow: 0px 1px 2px 0 rgba(0,0,0,.12);
+   
+}
+
+.cardTitle {
+    padding: 5px 12px 0px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.description {
+    height: 52px;
+    margin: 16px 16px;
+}
+
+.card-button{
+    background-color:#e1edfb ;
+    border: none;
+    color: #3483fa;
+    font-size: 12px;
+    font-weight: 500;
+    width: 149px;
+    height: 24px;
+    border-radius: 2px;
+}
+
+.botao {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.botao:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
+}
+
+
+.nextButton {
+    transform: translateX(24px);
+}
+.previousButton {
+    transform: translateX(-31px);
+}
+
+.iconbutton{
+    font-size: 50px;
+    font-weight: 200;
+    color: #507fc6;
+}
+
+.hideButton {
+    display: none;
+}
+
+
+
+.slideProducts-desktop{
+    max-width: 88% !important;
+    margin: 0 auto;
+}
+.slideProducts-desktop .row{
+    margin: 0 auto;
+}
+
+.slideProducts-desktop .col-md-4{
+    /* max-width: 87% !important; */
+    padding: 0px !important;
+}
+
+.slideProducts-desktop .card-Price{
+    max-width: 338px;
+    width: 338px;
+    height: 440px !important;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+    border-radius: 8px;
+}
+
+.radio-card{
+    cursor: pointer;
+    width: 30% !important;
+}
+
+.title-card-bigCard{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.slideProducts-desktop .card-Price figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slideProducts-desktop .card-Price figure img{
+    width: 55%;
+    height: 150px;
+}
+
+.card-Price .preco {
+    font-size: 32px !important;
+    font-weight: 400;
+}
+
+.card-Price .preco sup {
+    color: #00a650;
+    font-size: 18px !important;
+}
+
+.card-Price .subInfo{
+    color: #00a650;
+    font-size: 14px !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin: 0px !important;
+}
+.card-Price .rayIcon{
+   font-size: 14px;
+   padding: 0px !important;
+}
+
+.frete-paragraph{
+    margin: 4px 0px 0px 0px !important;
+}
+
+.slide-produtos-content{
+    display: flex;
+    gap: 20px !important;
+    justify-content: space-between;
+    overflow-x: scroll;
+}
+.slide-produtos-content .botao{
+    top: 15%;
+}
+
+
+.slide-produtos-content::-webkit-scrollbar{
+    display: none;
+}
+
+.slide-produtos-container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 69.5% !important;
+    height: auto;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+
+}
+
+.cardsProducts {
+    /* display: none; */
+    min-width: 181px !important;
+    min-height: 341px !important;
+    border: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+.cardsProducts .preco{
+  font-size: 27px !important;
+}
+
+.cardsProducts .preco sup {
+    color: #00a650;
+    font-size: 16px !important;
+}
+
+
+.cardsProducts .subInfo{
+    color: #00a650;
+    font-size: 14px !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin: 0px !important;
+}
+
+.productsInternalTexts p:nth-child(1) {
+    margin-bottom: 10px;
+}
+.productsInternalTexts p:nth-child(1):hover {
+    color: #3483fa;
+}
+
+.descCard  {
+    font-size: 15px !important;
+}
+
+.publi-container figure{
+   margin: 0px !important;
+   height: 100%;
+}
+.publi-container figure img{
+   margin: 0px !important;
+   height: 100%;
+}
+
+.publi-container .texts{
+    height: 240px !important;
+    overflow: hidden;
+    padding: 63px 63px 42px;
+
+}
+.publi-container .texts p{
+    margin: 0px;
+
+}
+.publi-container .texts h3{
+    margin-bottom: 20px;
+}
+
+.link-publi{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0rem !important;
+}
+
+.slide-produtos-Bluetooth{
+    display: flex;
+    /* flex-wrap: wrap; */
+    overflow-x: scroll;
+    gap: 18px;
+    /* justify-content: space-between; */  
+}
+
+.slide-produtos-Bluetooth::-webkit-scrollbar{
+    display: block;
+    
+}
+
+
+
+
+
+
+    
+    /* Esconder items */
+
+    .containerSlide2,
+    .infosFrete,.slide, 
+    .assinarFooter, 
+    .assineHeader,
+    .loginCard,
+    .containerSlide3, 
+    #assinarContainer,
+    .products,
+    .benefitsContainer,
+    .categoriaContainer,
+    .categoriaContainer,
+    .footer-infos,
+    .containerSlide4,
+    .yellow-bar,
+    .list-footer-container,
+    .gradient,
+    .lineOne,
+    .linetwo
+    {
+        display: none;
     }
 
     

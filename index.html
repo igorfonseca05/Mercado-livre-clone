@@ -112,14 +112,743 @@
             </div>
         </div>
     </header>
-    <div class="container-fluid">
+    <div style="position: relative;">
+        <div id="container-slide-fullscreen" class="container-fluid">
+            <div style="position: relative;" class="row">
+                <div data-js="slide-full-screean" class="col-12 p-0 slide-full-screean">
+                    <button id="slideButton" class="previous-Button">
+                        <span class="material-symbols-outlined previous-Button">
+                            navigate_before
+                        </span>
+                    </button>
+                    <div data-js="containerImages" class="containerImages"></div>
+                    <button id="slideButton" class="next-Button">
+                        <span class="material-symbols-outlined next-Button">
+                            navigate_next
+                        </span>
+                    </button>
+                    <!-- <img class="img-fluid" src="img/bg-desktop1.webp" alt=""> -->
+                </div>
+                <ul class="markImg-point">
+        
+                </ul>
+                <div style="position: absolute; width: 100%; height: 100px;
+                background-image: linear-gradient(180deg,transparent,#ebebeb); padding: 0px; bottom: 0px;" class="container-fluid">
+                </div>
+            </div>
+            <div style="position: absolute; top: 72%; left: 6%;" class="slidetwo-fullscreen">
+                <button class="previousButton botao hideButton " style="position: absolute; top:40%">
+                    <span class="material-symbols-outlined iconbutton">
+                        navigate_before
+                    </span>
+                </button>
+                <div id="container-slides2-fullScreen" class="col-12">
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Entre na sua conta</p>
+                        <figure class="iconContainer">
+                            <img src="svg/icon1.svg" alt="icon dinheiro">
+                        </figure>
+                        <p class="description">Aproveite ofertas para comprar tudo que <br> quiser</p>
+                        <button class="card-button">Entrar na sua conta</button>
+                    </div>
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Meio de pagamento</p>
+                        <figure class="iconContainer">
+                            <img src="svg/iconwallet.svg" alt="icon segurança">
+                        </figure>
+                        <p class="description compra">Pague suas compras com rapidez e segurança</p>
+                        <button class="card-button">Mostrar meios</button>
+                    </div>
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Menos de R$100</p>
+                        <figure class="iconContainer">
+                            <img src="svg/iconCoin.svg" alt="icon loja">
+                        </figure>
+                        <p class="description">Confira produtos com preços baixos</p>
+                        <button class="card-button">Mostrar produtos</button>
+                    </div>
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Mais vendidos</p>
+                        <figure class="iconContainer">
+                            <img src="svg/iconShop.svg" alt="icon loja">
+                        </figure>
+                        <p class="description">Explore os produtos que são tendência</p>
+                        <button class="card-button">Ir para Mais vendidos</button>
+                    </div>
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Compra garantida</p>
+                        <figure class="iconContainer">
+                            <img src="svg/letterIcon.svg" alt="icon loja">
+                        </figure>
+                        <p class="description">Você pode devolver sua compra grátis</p>
+                        <button class="card-button">Como funciona</button>
+                    </div>
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Lojas oficiais</p>
+                        <figure class="iconContainer">
+                            <img src="svg/shopIcon.svg" alt="icon loja">
+                        </figure>
+                        <p class="description">Suas marcas <br>  preferidas</p>
+                        <button class="card-button">Mostrar lojas</button>
+                    </div>
+                    <div class="cards card-fullscreen">
+                        <p class="cardTitle text-start">Nossas categorias</p>
+                        <figure class="iconContainer">
+                            <img src="svg/square.svg" alt="icon loja">
+                        </figure>
+                        <p class="description">Encontre celulares, roupas, imóveis e muito mais</p>
+                        <button class="card-button">Ir para categorias</button>
+                    </div>
+                </div>
+                <button class="nextButton botao" style="position: absolute; right: 0px; top:40%">
+                    <span class="material-symbols-outlined iconbutton">
+                        navigate_next
+                    </span>
+                </button>
+            </div> 
+    </div>
+    </div>
+    <div style="position: relative; top: 35%;"  class="container-fluid slideProducts-desktop">
         <div class="row">
-            <div class="col-12 p-0">
-                <img class="img-fluid" src="img/bg-desktop1.webp" alt="">
+            <div class="col-12 col-md-4 radio-card">
+                    <div class="card-Price">
+                        <p class="title-card-bigCard" >Oferta do dia</p>
+                        <figure class="imageContainer">
+                         <img decoding="async" src='img/radio.webp' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p>Caixa Amplificada Connect Lights Cm-400 Preta Mondial Bivolt Cor Preto 110V/220V</p>
+                             <p><del>R$ 1.999</del></p>
+                             <p><span class="preco">R$ 1.399<sup>30% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p class="frete-paragraph">
+                                 <span class="frete subInfo">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div>
+                </div>
+            <div class="col-12 col-md-8 slide-produtos-container" style="position: relative;">
+                <div class="row">
+                    <div class="col-6"> 
+                        <p class="title-card-bigCard">Ofertas do dia</p>
+                    </div>
+                    <div class="col-6"> 
+                        <p class="title-card-bigCard text-end">
+                            <ul class="d-flex ">
+                                <li style="list-style: none;">.<span></span></li>
+                                <li style="list-style: none;">.<span></span></li>
+                                <li style="list-style: none;">.<span></span></li>
+                                <li style="list-style: none;">.<span></span></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide-produtos-content">
+                    <button class="nextButton nextButton-SecondSlide botao" style="position: absolute; right: -5px; top:40%">
+                        <span class="material-symbols-outlined iconbutton">
+                            navigate_next
+                        </span>
+                    </button>
+                    <div class="cards cardOne  cardsProducts">
+                        <figure class="imageContainer">
+                         <img width="181" height="181.5" decoding="async" src='img/celular-prod.webp' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                             <p><del>R$ 1.099</del></p>
+                             <p><span class="preco ">R$ 559<sup>49% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p class="frete-paragraph" style="font-size: 25px;">
+                                 <span class="frete subInfo">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div> 
+                     <div class="cards cardOne  cardsProducts">
+                        <figure class="imageContainer">
+                         <img width="181" height="181.5" decoding="async" src='img/microondas-prod.webp' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                             <p><del>R$ 1.099</del></p>
+                             <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p class="frete-paragraph" style="font-size: 25px;" >
+                                 <span class="frete subInfo ">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div>
+                     <div class="cards cardOne cardsProducts">
+                        <figure class="imageContainer">
+                         <img width="181" height="181.5" decoding="async" src='img/tv-prod.webp' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                             <p><del>R$ 1.099</del></p>
+                             <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p class="frete-paragraph" style="font-size: 25px;">
+                                 <span class="frete subInfo">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div>
+                     <div class="cards cardOne  cardsProducts">
+                        <figure class="imageContainer">
+                         <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                             <p><del>R$ 1.099</del></p>
+                             <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p class="frete-paragraph" style="font-size: 25px;">
+                                 <span class="frete subInfo">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div>
+                     <div class="cards cardOne  cardsProducts">
+                        <figure class="imageContainer">
+                         <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                        </figure>
+                         <div class="productsInternalTexts">
+                             <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                             <p><del>R$ 1.099</del></p>
+                             <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                             <p class="frete-paragraph" style="font-size: 25px;">
+                                 <span class="frete subInfo">Frete Grátis
+                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                 <span class="italic">FULL</span>
+                                 </span>
+                             </p>
+                         </div>
+                     </div>
+                     <button class="previousButton previousButton-SecondSlide botao" style="position: absolute; left: 0px;top:40%">
+                        <span class="material-symbols-outlined iconbutton">
+                            navigate_before
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid my-5" style="width: 99.2%;">
+            <div class="row publi-container">
+                    <div class="col-md-7 p-0">
+                        <figure>
+                            <img class="img-fluid" src="img/propaganda.jpg" alt="">
+                        </figure>
+                    </div>
+               
+                <div style="cursor: pointer; color: white; background-color: #7a7a7a;" class="col-md-5  p-0">
+                    <div class="texts">
+                        <p>SEM AUMENTO DE PREÇO</p>
+                        <h3>TAXA 0% + RECARGA GRÁTIS 2024</h3>
+                        <a href="" class="link-publi">COMPRE JÁ  
+                            <span class="material-symbols-outlined">
+                            navigate_next
+                        </span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="container-fluid mb-5" style="background-color: white; box-shadow: 0 1px 2px 0 rgba(0,0,0,.12); border-radius: 8px; position: relative;">
+            <div class="row">
+                <div class="col-12 title-card-bigCard p-3">Mais vendidos em Caixas Bluetooth</div>
+                <div class="col-12">
+                    <div class="slide-produtos-Bluetooth">
+                        <button class="nextButton nextButton-ThirdSlide botao" style="position: absolute; right: -10px; top:40%">
+                            <span class="material-symbols-outlined iconbutton">
+                                navigate_next
+                            </span>
+                        </button>
+                        <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/celular-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco ">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div> 
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/microondas-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;" >
+                                     <span class="frete subInfo ">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/tv-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                            </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                            </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                            </div>
+                            <button class="previousButton previousButton-ThirdSlide botao" style="position: absolute; left: 0px; top:40%">
+                               <span class="material-symbols-outlined iconbutton">
+                                   navigate_before
+                               </span>
+                           </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="container-fluid" style="background-color: white; box-shadow: 0 1px 2px 0 rgba(0,0,0,.12); border-radius: 8px; position: relative;">
+            <div class="row">
+                <div class="col-12 title-card-bigCard p-3">Mais vendidos em Caixas Bluetooth</div>
+                <div class="col-12">
+                    <div class="slide-produtos-Bluetooth">
+                        <button class="nextButton nextButton-ThirdSlide botao" style="position: absolute; right: -10px; top:40%">
+                            <span class="material-symbols-outlined iconbutton">
+                                navigate_next
+                            </span>
+                        </button>
+                        <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/celular-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco ">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div> 
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/microondas-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;" >
+                                     <span class="frete subInfo ">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/tv-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                            </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                            </div>
+                         <div class="cards cardOne  cardsProducts">
+                            <figure class="imageContainer">
+                             <img width="181" height="181.5" decoding="async" src='img/suplemento-prod.webp' alt="">
+                            </figure>
+                             <div class="productsInternalTexts">
+                                 <p class="descCard">Smartphone Samsung Galaxy A04e 64gb...</p>
+                                 <p><del>R$ 1.099</del></p>
+                                 <p><span class="preco">R$ 559<sup>49% OFF</sup></span></p>
+                                 <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
+                                 <p class="frete-paragraph" style="font-size: 25px;">
+                                     <span class="frete subInfo">Frete Grátis
+                                     <span class="material-symbols-outlined rayIcon">flash_on</span>
+                                     <span class="italic">FULL</span>
+                                     </span>
+                                 </p>
+                             </div>
+                            </div>
+                            <button class="previousButton previousButton-ThirdSlide botao" style="position: absolute; left: 0px; top:40%">
+                               <span class="material-symbols-outlined iconbutton">
+                                   navigate_before
+                               </span>
+                           </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-fluid my-5" style="width: 99.2%;">
+            <div class="row publi-container">
+                    <div class="col-md-7 p-0">
+                        <figure>
+                            <img class="img-fluid" src="img/propaganda2.jpg" alt="">
+                        </figure>
+                    </div>
+               
+                <div style="cursor: pointer; color: white; background-color: #2968c9;" class="col-md-5  p-0">
+                    <div class="texts">
+                        <p>GARANTIA ESTENDIDA</p>
+                        <h3>PRODUTOS COM A MELHOR PROTEÇÃO</h3>
+                        <a href="" class="link-publi">SAIBA MAIS  
+                            <span class="material-symbols-outlined">
+                            navigate_next
+                        </span></a>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container-fluid my-5">
+                            <div class="row publi-container">
+                                    <div class="col-md-7 p-0">
+                                        <figure>
+                                            <img class="img-fluid" src="img/propaganda2.jpg" alt="">
+                                        </figure>
+                                    </div>
+                               
+                                <div style="cursor: pointer; color: white; background-color: #2968c9;" class="col-md-5  p-0">
+                                    <div class="texts">
+                                        <p>GARANTIA ESTENDIDA</p>
+                                        <h3>PRODUTOS COM A MELHOR PROTEÇÃO</h3>
+                                        <a href="" class="link-publi">SAIBA MAIS  
+                                            <span class="material-symbols-outlined">
+                                            navigate_next
+                                        </span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container-fluid my-5">
+                            <div class="row publi-container">
+                                    <div class="col-md-7 p-0">
+                                        <figure>
+                                            <img class="img-fluid" src="img/propaganda2.jpg" alt="">
+                                        </figure>
+                                    </div>
+                               
+                                <div style="cursor: pointer; color: white; background-color: #2968c9;" class="col-md-5  p-0">
+                                    <div class="texts">
+                                        <p>GARANTIA ESTENDIDA</p>
+                                        <h3>PRODUTOS COM A MELHOR PROTEÇÃO</h3>
+                                        <a href="" class="link-publi">SAIBA MAIS  
+                                            <span class="material-symbols-outlined">
+                                            navigate_next
+                                        </span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div  class="container slide d-md-none ">
+    
+    <div  class="container slide d-md-none">
         <div class="row slideOneContainer">
             <div data-js="imagensContainer" class="col-12"></div>
             <!-- <div class="col-3">S</div> -->
@@ -131,10 +860,10 @@
         </div>
     </div>
     <div>
-        <div  class="containerSlide2 d-md-none ">
+        <div  class="containerSlide2">
             <div data-js="SecondimagensContainer" class="col-12"></div>
         </div>
-        <div   class="containerSlide3 d-sm-none">
+        <div   class="containerSlide3">
             <div data-js="thirdImagensContainer" class="col-12">
                 <div class="cards cardOne">
                     <p id="visto">Visto recentemente</p>
@@ -192,97 +921,73 @@
             </div>
         </div>
     </div>
-    <div  class="container-fluid slideProducts-desktop d-md-none">
-        <div class="row">
-            <div class="col-4">
-                <div>
-                    <p>Oferta do dia</p>
-                    <div class="cards cardOne  cardsProducts">
-                        <figure class="imageContainer">
-                         <img width="150" height="150" decoding="async" src='img/prod3.jpeg' alt="">
-                        </figure>
-                         <div class="productsInternalTexts">
-                             <p>Notebook Samsung Galaxy Book Go...</p>
-                             <p><del>R$ 1.999</del></p>
-                             <p><span class="preco">R$ 1.399<sup>30% OFF</sup></span></p>
-                             <p class="subInfo">em <span>10x R$ 87,90 sem juros</span></p>
-                             <p>
-                                 <span class="frete">Frete Grátis
-                                 <span class="material-symbols-outlined rayIcon">flash_on</span>
-                                 <span class="italic">FULL</span>
-                                 </span>
-                             </p>
-                         </div>
-                     </div>
-                </div>
-            </div>
-            <div class="col-8"></div>
-    </div>
     </div>
     <div class="container-fluid d-sm-none" >
         <div class="row">
-            <div class="col-12 assineContainer">
-                <div class="col-12 assineHeader-Desktop " style="border-radius: 10px 10px 0px 0px;">
-                    <div style="min-height: 50px;" class="row px-4">
-                        <div class="col-6 py-2">Assine o <span> <img style="width: 18%;" src="img/merni.icon.png" alt=""></span></div>
-                        <div class="col-6 text-end py-4">R$ 17 <sup>99</sup>/mês</div>
-                    </div>  
-                </div>
-                <div class="col-12 assineHeader">
-                     <img src="img/assine.jpeg" alt=""> 
-                </div>
-                <div class="col-12 assineBody">
-                    <p>Conte com os melhores benefícios no Mercado Livre e do Mercado Pago</p>
-                  <div id="Assinar-container">
-                      <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-2 col-md-4">
-                                <img class="assineImagens" src="img/truck Icon.png" alt="">
-                            </div>
-                            <div class="col-10 col-md-8 assinarInternalText">Frete grátis em milhões de produtos a partir de R$29</div>
-                        </div>
-                      </div>
-                        <div class="col-md-3">
-                            <div class="row">
-                                <div class="col-2 col-md-4">
-                                    <img class="assineImagens" src="img/disney.jpg" alt="">
-                                </div>
-                                <div class="col-10 col-md-8 assinarInternalText">Disney<sup>+</sup> e Stars<sup>+</sup> sem custo</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="row">
-                                <div class="col-2 col-md-4">
-                                    <img class="assineImagens" src="img/diezer.png" alt="">
-                                </div>
-                                <div class="col-10 col-md-8 assinarInternalText">Deezer Premium 12 meses sem custo</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="row">
-                                <div class="col-2 col-md-4">
-                                    <img class="assineImagens" src="img/carro.png" alt="">
-                                </div>
-                                <div class="col-10 col-md-8 assinarInternalText">60% OFF no Ultrapasse e outros benefícios</div>
-                            </div>
-                        </div>
-                  </div>
-                </div>
-                <div class="row assinarFooter">
-                    <div class="col-10 assinarInternalText">Assinar o Meli+</div>
-                    <div class="col-2 assinarIcon"><span class="material-symbols-outlined">
-                        chevron_right
-                        </span></div>
-                </div>
-                <hr class="opacityLine">
-                <div class="row assinarFooterBtn">
-                   <div class="col-12">
-                    <div class="row justify-content-end text-end px-4 ">
-                        <div class="col-4 pb-3">
-                            <a style="background-color: #3483fa; color: white;" href="" class="btn btn-lg">Assinar o Meli+</a>
+            <div id="assinarContainer">
+                <div class="col-12 assineContainer">
+                    <div class="col-12 assineHeader-Desktop " style="border-radius: 10px 10px 0px 0px;">
+                        <div style="min-height: 50px;" class="row px-4">
+                            <div class="col-6 py-2">Assine o <span> <img style="width: 18%;" src="img/merni.icon.png" alt=""></span></div>
+                            <div class="col-6 text-end py-4">R$ 17 <sup>99</sup>/mês</div>
                         </div>
                     </div>
-                   </div>
+                    <div class="col-12 assineHeader">
+                         <img src="img/assine.jpeg" alt="">
+                    </div>
+                    <div class="col-12 assineBody">
+                        <p>Conte com os melhores benefícios no Mercado Livre e do Mercado Pago</p>
+                      <div id="Assinar-container">
+                          <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-2 col-md-4">
+                                    <img class="assineImagens" src="img/truck Icon.png" alt="">
+                                </div>
+                                <div class="col-10 col-md-8 assinarInternalText">Frete grátis em milhões de produtos a partir de R$29</div>
+                            </div>
+                          </div>
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-2 col-md-4">
+                                        <img class="assineImagens" src="img/disney.jpg" alt="">
+                                    </div>
+                                    <div class="col-10 col-md-8 assinarInternalText">Disney<sup>+</sup> e Stars<sup>+</sup> sem custo</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-2 col-md-4">
+                                        <img class="assineImagens" src="img/diezer.png" alt="">
+                                    </div>
+                                    <div class="col-10 col-md-8 assinarInternalText">Deezer Premium 12 meses sem custo</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-2 col-md-4">
+                                        <img class="assineImagens" src="img/carro.png" alt="">
+                                    </div>
+                                    <div class="col-10 col-md-8 assinarInternalText">60% OFF no Ultrapasse e outros benefícios</div>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="row assinarFooter">
+                        <div class="col-10 assinarInternalText">Assinar o Meli+</div>
+                        <div class="col-2 assinarIcon"><span class="material-symbols-outlined">
+                            chevron_right
+                            </span></div>
+                    </div>
+                    <hr class="opacityLine">
+                    <div class="row assinarFooterBtn">
+                       <div class="col-12">
+                        <div class="row justify-content-end text-end px-4 ">
+                            <div class="col-4 pb-3">
+                                <a style="background-color: #3483fa; color: white;" href="" class="btn btn-lg">Assinar o Meli+</a>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,30 +1078,31 @@
         </div>
     </div>
     <div  class="container benefitsContainer d-sm-none">
-        <div class="row ">
-            <p>Benefícios em conteúdo</p>
-            <div class="col-6 contentOne">
-              <div class="cardBeneficio">
-                <img class="centralIcon" src="img/disney.jpg" alt="">
-               <figure class="bgImage">
-                <img src="img/beneficio1.jpeg" alt="">
-               </figure>
-               <div class="gradientBlue"></div>
-               <p class="mainText">Sem custo com Meli+</p>
-               <p class="secondParagraphs">Disney<sup>+</sup> e Stars<sup>+</sup> </p>
-              </div>
-            </div>
-            <div class="col-6 contentOne contentTwo">
-                <div class="cardBeneficio">
-                  <img class="centralIcon" src="img/hbo.png" alt="">
-                 <figure class="bgImage">
-                  <img src="img/bg2.jpeg" alt="">
-                 </figure>
-                 <div class="gradientBlue"></div>
-                 <p class="mainText">15% OFF</p>
-                 <p class="secondParagraphs2">HBO Max </p>
+        <div class="row">
+                <p>Benefícios em conteúdo</p>
+                <div class="col-6 contentOne">
+                  <div class="cardBeneficio">
+                    <img class="centralIcon" src="img/disney.jpg" alt="">
+                   <figure class="bgImage">
+                    <img src="img/beneficio1.jpeg" alt="">
+                   </figure>
+                   <div class="gradientBlue"></div>
+                   <p class="mainText">Sem custo com Meli+</p>
+                   <p class="secondParagraphs">Disney<sup>+</sup> e Stars<sup>+</sup> </p>
+                  </div>
                 </div>
-              </div>
+                <div class="col-6 contentOne contentTwo">
+                    <div class="cardBeneficio">
+                      <img class="centralIcon" src="img/hbo.png" alt="">
+                     <figure class="bgImage">
+                      <img src="img/bg2.jpeg" alt="">
+                     </figure>
+                     <div class="gradientBlue"></div>
+                     <p class="mainText">15% OFF</p>
+                     <p class="secondParagraphs2">HBO Max </p>
+                    </div>
+                  </div>
+           
         </div>
     </div>
     <div  class="container-fluid d-sm-none">
@@ -640,7 +1346,7 @@
         </div>
     </div>
 
-    <div class="container-fluid containerSlide4 d-sm-none">
+    <div class="container-fluid containerSlide4">
         <div class="row slide4">
            <div data-js="slide4Container" class="slide4Container">
             <div data-js="slide1" class="col-12 slide1">
@@ -685,7 +1391,7 @@
            </div>
         </div>
     </div>
-    <div  class="container list-footer-container d-sm-none">
+    <div  class="container list-footer-container">
         <div class="row ">
            <div class="col-6">
             <ul class="ul-Container">
@@ -708,7 +1414,7 @@
         </div>
     </div>
     
-    <div  class="container footer-infos d-sm-none">
+    <div  class="container footer-infos d-sm-none ">
         <div class="row signIn-create-links justify-content-center px-5">
             <div class="col-3 links-create-signIn-footer">
                 <a href="#">Entre</a>
