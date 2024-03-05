@@ -53,6 +53,36 @@ const activeThirdSlide = () => {
 
 activeThirdSlide()
 
+const activeFourthSlide = () => {
+    const containerSecondSlide = document.querySelector('.fourth-slide')
+    const nextButtonSecondSlide = document.querySelector('.nextButton-FourthSlide')
+    const beforeButtonSecondSlide = document.querySelector('.previousButton-FourthSlide')
+
+    scrollSlide(containerSecondSlide, nextButtonSecondSlide, beforeButtonSecondSlide)
+}
+
+activeFourthSlide()
+
+const activeFifthSlide = () => {
+    const containerSecondSlide = document.querySelector('.fifth-slide')
+    const nextButtonSecondSlide = document.querySelector('.nextButton-FifthSlide')
+    const beforeButtonSecondSlide = document.querySelector('.previousButton-FifthSlide')
+
+    scrollSlide(containerSecondSlide, nextButtonSecondSlide, beforeButtonSecondSlide)
+}
+
+activeFifthSlide()
+
+const activeSixthSlide = () => {
+    const containerSecondSlide = document.querySelector('.sixth-slide')
+    const nextButtonSecondSlide = document.querySelector('.nextButton-SixthSlide')
+    const beforeButtonSecondSlide = document.querySelector('.previousButton-SixthSlide')
+
+    scrollSlide(containerSecondSlide, nextButtonSecondSlide, beforeButtonSecondSlide)
+}
+
+activeSixthSlide()
+
 
 const templeteToBeRender = (imagens, imgContainer, textos, className) => {
     if (imagens[0].p) {
@@ -130,7 +160,7 @@ const clickButton = () => {
         nextButton.style.display = 'block'
         previousButton.style.display = 'block'
 
-        console.log('entrei')
+        // console.log('entrei')
         clearInterval(timer)
 
     }
@@ -145,7 +175,7 @@ const clickButton = () => {
         previousButton.style.display = 'none'
 
         timer = setInterval(() => {
-            console.log('sai')
+            // console.log('sai')
             nextButton.click()
         }, 5000
         )
@@ -242,6 +272,39 @@ const slideTwo = () => {
 }
 
 
+const activeButtonCollapse = () => {
+    const button = document.querySelector('[data-js="button-Collapse"]')
+    const footerBody = document.querySelector('[data-js="collapse-Footer"]')
+    const arrowCollapse = document.querySelector('.arrow-collapse')
+
+    button.addEventListener('click', () => {
+        button.classList.toggle('collapse-Footer-actived')
+        footerBody.classList.toggle('collapse-Footer-actived')
+        arrowCollapse.classList.toggle('turnButton')
+    })
+}
+
+const testingElement = (el) => {
+    const input = document.querySelector('[data-js="input"]')
+
+    if(el.classList.contains('searchInput')) {
+        input.style.border = "1px solid #1d87da" 
+    } else {
+        input.style.border = "none"   
+    }
+}
+
+const activeSearchInput = () => {
+
+    document.addEventListener('click', (e) => {
+        testingElement(e.target)
+    })
+    
+}
+
 slideOne()
 slideTwo()
 slidethree()
+
+activeButtonCollapse()
+activeSearchInput()
